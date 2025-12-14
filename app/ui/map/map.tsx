@@ -13,7 +13,7 @@ export default function Map() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center">
+    <div className="h-screen w-screen flex flex-col items-center mt-20">
       <h1
         className={clsx(
           "text-4xl h-[10vh] w-full text-secondary-accent text-center transition-all duration-2000",
@@ -32,7 +32,7 @@ export default function Map() {
           { "opacity-0 translate-y-12": !isVisible }
         )}
       >
-        <div className="h-full w-full flex">
+        <div className="w-full max-h-10/12 flex">
           <MapSVG
             activeState={activeState}
             setActiveState={setActiveState}
@@ -56,7 +56,7 @@ export default function Map() {
               }
             }}
             className={`bg-gray-300 transition-all duration-1000 ease-in rounded-r-lg
-                    ${markerClicked ? "w-1/2" : "w-0"}`}
+                    ${markerClicked ? "w-[75ch]" : "w-0"}`}
           >
             {showContent && <PersonCard fadeOutContent={fadeOutContent} />}
           </div>

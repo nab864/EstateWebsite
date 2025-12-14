@@ -20,7 +20,7 @@ export default function ServiceDescription({
     <div
       ref={ref}
       className={clsx(
-        "w-[75%] flex flex-1 bg-secondary p-5 rounded-2xl overflow-hidden transition-all duration-2000",
+        "w-[75%] max-w-[150ch] flex bg-secondary p-5 rounded-2xl overflow-hidden transition-all duration-2000",
         { hidden: listId !== activeService },
         { "opacity-100 translate-y-0": isVisible },
         { "opacity-0 translate-y-12": !isVisible }

@@ -5,7 +5,7 @@ import clsx from "clsx";
 export default function Services() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="h-screen w-screen flex flex-col items-center">
+    <div className="w-screen flex flex-col items-center mt-20">
       <h1
         ref={ref}
         className={clsx(

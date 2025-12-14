@@ -7,7 +7,7 @@ export default function ServiceBox() {
   const [activeService, setActiveService] = useState<String>("service-1");
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="flex flex-col items-center w-full h-full text-secondary-accent transition duration-2000">
+    <div className="flex flex-col items-center h-full text-secondary-accent transition duration-2000">
       <div id="service-list-top" className="flex justify-between w-[75%]">
         <div
           id="service-1"
