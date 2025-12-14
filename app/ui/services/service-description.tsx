@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { useInView } from "../use-in-view";
+import { useInView } from "../use-in-view-div";
 
 export default function ServiceDescription({
   title,

@@ -1,7 +1,7 @@
 import MapSVG from "./map-svg";
 import { useState } from "react";
 import PersonCard from "./person-card";
-import { useInView } from "../use-in-view";
+import { useInView } from "../use-in-view-div";
 import clsx from "clsx";
 
 export default function Map() {

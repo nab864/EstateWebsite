@@ -13,7 +13,7 @@
   --color-map-clickable: var(--map-clickable);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --animate-wiggly: wiggly 1s ease-in-out forwards;
+  --animate-flash: flash 2s ease-in-out;
   --animate-slide-right: slide-right 1s ease-in forwards;
   --animate-slide-down: slide-down 1s ease-in forwards;
   --animate-slide-left: slide-left 1s ease-in forwards;
@@ -76,13 +76,17 @@
     }
   }
 
-  @keyframes wiggly {
-    0%,
+  @keyframes flash {
+    0% {
+      scale: 100%;
+    }
     50% {
-      transform: rotate(50deg);
+      scale: 110%;
+      fill: var(--highlight);
     }
     100% {
-      transform: rotate(50deg);
+      scale: 100%;
+      fill: var(--map-clickable);
     }
   }
 }
@@ -91,11 +95,10 @@
   :root {
     --background: #030303;
     --primary: #916f0b;
-    --secondary: #1C1C1C;
-    --secondary-accent: #E5E5E5;
+    --secondary: #1c1c1c;
+    --secondary-accent: #e5e5e5;
     --highlight: #800020;
-    --map-clickable: #004D4D
-
+    --map-clickable: #004d4d;
   }
 }
 

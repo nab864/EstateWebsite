@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ServiceDescription from "./service-description";
 import clsx from "clsx";
-import { useInView } from "../use-in-view";
+import { useInView } from "../use-in-view-div";
 
 export default function ServiceBox() {
   const [activeService, setActiveService] = useState<String>("service-1");
@@ -71,7 +71,7 @@ export default function ServiceBox() {
         </div>
       </div>
       <div id="service-list-bot" className="flex justify-between w-[40%] mb-5">
-       <div
+        <div
           id="service-4"
           ref={ref}
           className={clsx(

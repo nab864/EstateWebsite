@@ -1,5 +1,5 @@
 import ServiceBox from "./services-box";
-import { useInView } from "../use-in-view";
+import { useInView } from "../use-in-view-div";
 import clsx from "clsx";
 
 export default function Services() {
