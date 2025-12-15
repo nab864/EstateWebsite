@@ -6,6 +6,7 @@ import FazeWord from "./ui/faze-in";
 import Landing from "./ui/landing/landing";
 import Map from "./ui/map/map";
 import Services from "./ui/services/services";
+import Footer from "./ui/footer/footer";
 
 export default function WelcomeMessage() {
   const [show, setShow] = useState(false);
@@ -30,6 +31,7 @@ export default function WelcomeMessage() {
         <Landing />
         <Services />
         <Map />
+        <Footer />
       </div>
     );
 

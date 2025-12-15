@@ -13,7 +13,7 @@
   --color-map-clickable: var(--map-clickable);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --animate-flash: flash 2s ease-in-out;
+  --animate-flash: flash 2.5s ease-in-out;
   --animate-slide-right: slide-right 1s ease-in forwards;
   --animate-slide-down: slide-down 1s ease-in forwards;
   --animate-slide-left: slide-left 1s ease-in forwards;

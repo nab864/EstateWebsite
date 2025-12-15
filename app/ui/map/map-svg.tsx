@@ -746,7 +746,7 @@ export default function MapSVG({
         style={{
           transformOrigin: "center",
           transformBox: "fill-box",
-          animationDelay: "2.1s",
+          animationDelay: "2.2s",
         }}
         stroke="black"
         onMouseEnter={handleMouseEnter}
@@ -766,7 +766,7 @@ export default function MapSVG({
         style={{
           transformOrigin: "center",
           transformBox: "fill-box",
-          animationDelay: "2.2s",
+          animationDelay: "2.3s",
         }}
         stroke="black"
         onMouseEnter={handleMouseEnter}
@@ -786,7 +786,7 @@ export default function MapSVG({
         style={{
           transformOrigin: "center",
           transformBox: "fill-box",
-          animationDelay: "2.4s",
+          animationDelay: "2.6s",
         }}
         stroke="black"
         onMouseEnter={handleMouseEnter}
@@ -806,7 +806,7 @@ export default function MapSVG({
         style={{
           transformOrigin: "center",
           transformBox: "fill-box",
-          animationDelay: "2.3s",
+          animationDelay: "2.5s",
         }}
         stroke="black"
         onMouseEnter={handleMouseEnter}
