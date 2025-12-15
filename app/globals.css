@@ -2,6 +2,9 @@
 
 :root {
   --background: #ffffff;
+}
+
+@theme inline {
   --color-background: var(--background);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
@@ -15,79 +18,77 @@
   --animate-slide-down: slide-down 1s ease-in forwards;
   --animate-slide-left: slide-left 1s ease-in forwards;
   --animate-blur-in: blur-in 3s ease-in-out forwards;
-}
+  @keyframes blur-in {
+    0% {
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
-@keyframes blur-in {
-  0% {
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+      filter: blur(10px);
+      opacity: 0;
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
   }
-  50% {
-    opacity: 1;
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%);
+      filter: blur(10px);
+      opacity: 0;
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
   }
-  100% {
-    opacity: 1;
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      scale: 100%;
+    }
+    50% {
+      scale: 110%;
+      fill: var(--highlight);
+    }
+    100% {
+      scale: 100%;
+      fill: var(--map-clickable);
+    }
   }
 }
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(-100%);
-    filter: blur(10px);
-    opacity: 0;
-  }
-  65% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(100%);
-    filter: blur(10px);
-    opacity: 0;
-  }
-  65% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  65% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes flash {
-  0% {
-    scale: 100%;
-  }
-  50% {
-    scale: 110%;
-    fill: var(--highlight);
-  }
-  100% {
-    scale: 100%;
-    fill: var(--map-clickable);
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #030303;
