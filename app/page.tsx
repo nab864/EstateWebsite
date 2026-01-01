@@ -7,6 +7,7 @@ import Landing from "./ui/landing/landing";
 import Map from "./ui/map/map";
 import Services from "./ui/services/services";
 import Footer from "./ui/footer/footer";
+import About from "./ui/about/about";
 
 export default function WelcomeMessage() {
   const [show, setShow] = useState(false);
@@ -29,6 +30,7 @@ export default function WelcomeMessage() {
     return (
       <div className="fixed inset-0 overflow-auto" ref={scrollRef}>
         <Landing />
+        <About />
         <Services />
         <Map />
         <Footer />
@@ -37,20 +39,26 @@ export default function WelcomeMessage() {
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-background backdrop-blur-sm">
-      <div className="relative">
-        <div
-          className="absolute bg-background h-full w-full z-50 opacity-0 animate-blur-in"
-          style={{ animationDelay: `${3}s` }}
-        ></div>
-        <Image
-          src="/company-logo.svg"
-          alt="Logo"
-          width={500}
-          height={500}
-          className="opacity-0 animate-blur-in mb-5"
-        />
-        <FazeWord text={"Colorado Estate Management"} />
-      </div>
-    </div>
+  <div className="relative flex flex-col items-center justify-center">
+ 
+    <div
+      className="absolute inset-0 bg-background z-50 opacity-0 animate-blur-in"
+      style={{ animationDelay: "3s" }}
+    ></div>
+
+  
+    <Image
+      src="/company-logo.svg"
+      alt="Logo"
+      width={500}
+      height={500}
+      className="opacity-0 animate-blur-in"
+    />
+
+  
+    <FazeWord text={"Estate Services Collective"} />
+  </div>
+</div>
+
   );
 }

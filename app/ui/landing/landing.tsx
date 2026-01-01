@@ -9,7 +9,7 @@ export default function Landing() {
         images={["/house-1.jpg", "/house-2.jpg", "/house-3.jpg"]}
       />
       <h1
-        className="absolute bottom-30 left-30 m-8 text-4xl animate-slide-right opacity-0 text-secondary-accent"
+        className="absolute bottom-30 left-30 m-8 text-4xl animate-slide-right opacity-0 text-[#f6f3ee]"
         style={{ animationDelay: `${1.5}s` }}
       >
         Commitment You Feel <br />

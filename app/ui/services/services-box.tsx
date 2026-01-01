@@ -7,7 +7,7 @@ export default function ServiceBox() {
   const [activeService, setActiveService] = useState<String>("service-1");
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="flex flex-col items-center h-full text-secondary-accent transition duration-2000">
+    <div className="flex flex-col items-center h-full text-secondary transition duration-2000">
       <div id="service-list-top" className="flex justify-between w-[75%]">
         <div
           id="service-1"
@@ -21,9 +21,9 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 rounded-2xl hover:bg-map-clickable transition-colors duration-300 cursor-pointer h-full w-full",
+              "p-3 hover:bg-highlight transition-colors duration-300 cursor-pointer h-full w-full",
               { "bg-highlight": activeService === "service-1" },
-              { "bg-secondary": activeService !== "service-1" }
+              { "bg-primary": activeService !== "service-1" }
             )}
           >
             Property Management
@@ -41,9 +41,9 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 rounded-2xl hover:bg-map-clickable transition-colors duration-300 cursor-pointer h-full w-full",
+              "p-3 hover:bg-highlight transition-colors duration-300 cursor-pointer h-full w-full",
               { "bg-highlight": activeService === "service-2" },
-              { "bg-secondary": activeService !== "service-2" }
+              { "bg-primary": activeService !== "service-2" }
             )}
           >
             Staff Oversight
@@ -61,9 +61,9 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 rounded-2xl hover:bg-map-clickable transition-colors duration-300 cursor-pointer h-full w-full",
+              "p-3 hover:bg-highlight transition-colors duration-300 cursor-pointer h-full w-full",
               { "bg-highlight": activeService === "service-3" },
-              { "bg-secondary": activeService !== "service-3" }
+              { "bg-primary": activeService !== "service-3" }
             )}
           >
             Seasonal Residences
@@ -83,9 +83,9 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 rounded-2xl hover:bg-map-clickable transition-colors duration-300 cursor-pointer h-full w-full",
+              "p-3 hover:bg-highlight  transition-colors duration-300 cursor-pointer h-full w-full",
               { "bg-highlight": activeService === "service-4" },
-              { "bg-secondary": activeService !== "service-4" }
+              { "bg-primary": activeService !== "service-4" }
             )}
           >
             Landscaping
@@ -103,9 +103,9 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 rounded-2xl hover:bg-map-clickable transition-colors duration-300 cursor-pointer h-full w-full",
+              "p-3 hover:bg-highlight transition-colors duration-300 cursor-pointer h-full w-full",
               { "bg-highlight": activeService === "service-5" },
-              { "bg-secondary": activeService !== "service-5" }
+              { "bg-primary": activeService !== "service-5" }
             )}
           >
             Vehicle Care

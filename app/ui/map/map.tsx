@@ -16,7 +16,7 @@ export default function Map() {
     <div className="h-screen w-screen flex flex-col items-center mt-20">
       <h1
         className={clsx(
-          "text-4xl h-[10vh] w-full text-secondary-accent text-center transition-all duration-2000",
+          "text-4xl h-[10vh] w-full text-primary text-center transition-all duration-2000",
           { "opacity-100 translate-y-0": isVisible },
           { "opacity-0 translate-y-12": !isVisible }
         )}
