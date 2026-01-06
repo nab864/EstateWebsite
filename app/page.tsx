@@ -8,6 +8,7 @@ import Map from "./ui/map/map";
 import Services from "./ui/services/services";
 import Footer from "./ui/footer/footer";
 import About from "./ui/about/about";
+import CompanyLogo from "./ui/company-logo";
 
 export default function WelcomeMessage() {
   const [show, setShow] = useState(false);
@@ -39,26 +40,17 @@ export default function WelcomeMessage() {
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-background backdrop-blur-sm">
-  <div className="relative flex flex-col items-center justify-center">
- 
-    <div
-      className="absolute inset-0 bg-background z-50 opacity-0 animate-blur-in"
-      style={{ animationDelay: "3s" }}
-    ></div>
+      <div className="relative flex flex-col items-center justify-center">
+        <div
+          className="absolute inset-0 bg-background z-50 opacity-0 animate-blur-in"
+          style={{ animationDelay: "3s" }}
+        ></div>
+        <div className="opacity-0 animate-blur-in">
+          <CompanyLogo />
+        </div>
 
-  
-    <Image
-      src="/company-logo.svg"
-      alt="Logo"
-      width={500}
-      height={500}
-      className="opacity-0 animate-blur-in"
-    />
-
-  
-    <FazeWord text={"Estate Services Collective"} />
-  </div>
-</div>
-
+        <FazeWord text={"Estate Services Collective"} />
+      </div>
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export default function About() {
         <h1
           ref={ref}
           className={clsx(
-            "text-4xl font-serif tracking-wide transition-all duration-2000",
+            "text-4xl font-serif tracking-wide transition-all duration-2000 text-primary",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 translate-x-12": !isVisible }
           )}
@@ -38,7 +38,7 @@ export default function About() {
         <span
           ref={ref}
           className={clsx(
-            "text-sm uppercase tracking-[0.3em] transition-all duration-2000",
+            "text-sm uppercase tracking-[0.3em] transition-all duration-2000 text-primary",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 translate-x-12": !isVisible }
           )}
@@ -49,7 +49,7 @@ export default function About() {
         <p
           ref={ref}
           className={clsx(
-            "text-base leading-relaxed text-muted-foreground transition-all duration-2000",
+            "text-base leading-relaxed text-muted-foreground transition-all duration-2000 text-primary",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 translate-x-12": !isVisible }
           )}
