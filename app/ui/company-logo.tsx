@@ -20,12 +20,12 @@ export default function CompanyLogo() {
 
       <path id="topTextPath" d="M 90 250 A 160 160 0 0 1 410 250" fill="none" />
       <text
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="28"
-        letter-spacing="3"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize="28"
+        letterSpacing="3"
         className="fill-primary"
       >
-        <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">
+        <textPath href="#topTextPath" startOffset="50%" textAnchor="middle">
           ESTATE SERVICES
         </textPath>
       </text>
@@ -36,12 +36,12 @@ export default function CompanyLogo() {
         fill="none"
       />
       <text
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="22"
-        letter-spacing="2"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize="22"
+        letterSpacing="2"
         className="fill-primary"
       >
-        <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">
+        <textPath href="#bottomTextPath" startOffset="50%" textAnchor="middle">
           COLLECTIVE
         </textPath>
       </text>
@@ -49,11 +49,11 @@ export default function CompanyLogo() {
       <text
         x="250"
         y="270"
-        text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="96"
+        textAnchor="middle"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize="96"
         className="fill-primary"
-        letter-spacing="4"
+        letterSpacing="4"
       >
         ESC
       </text>

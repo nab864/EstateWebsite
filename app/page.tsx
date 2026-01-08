@@ -45,11 +45,15 @@ export default function WelcomeMessage() {
           className="absolute inset-0 bg-background z-50 opacity-0 animate-blur-in"
           style={{ animationDelay: "3s" }}
         ></div>
-        <div className="opacity-0 animate-blur-in">
+        <div className="opacity-0 animate-blur-in h-[50vh]">
           <CompanyLogo />
         </div>
-
-        <FazeWord text={"Estate Services Collective"} />
+        <span
+          className="animate-blur-in text-primary opacity-0 text-center text-4xl"
+          style={{ animationDelay: `${1}s` }}
+        >
+          Private Estate Network
+        </span>
       </div>
     </div>
   );

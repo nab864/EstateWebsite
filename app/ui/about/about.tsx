@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useInView } from "../use-in-view-div";
 import clsx from "clsx";
+import CompanyLogo from "../company-logo";
 
 export default function About() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
@@ -10,18 +11,14 @@ export default function About() {
         <div
           ref={ref}
           className={clsx(
-            "relative w-48 h-48 transition-all duration-2000",
+            "transition-all duration-2000",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 translate-x-12": !isVisible }
           )}
         >
-          <Image
-            src="/company-logo.svg"
-            alt="Estate Services Collective logo"
-            fill
-            className="object-contain"
-            priority
-          />
+          <div className="h-[40vh]">
+            <CompanyLogo />
+          </div>
         </div>
 
         <h1
@@ -32,7 +29,7 @@ export default function About() {
             { "opacity-0 translate-x-12": !isVisible }
           )}
         >
-          Estate Services Collective
+          Private Estate Network
         </h1>
 
         <span
@@ -43,7 +40,8 @@ export default function About() {
             { "opacity-0 translate-x-12": !isVisible }
           )}
         >
-          Nationwide Estate Management
+          Fractional Estate & Lifestyle Management for Ultra-High-Net-Worth
+          Families
         </span>
 
         <p
@@ -54,11 +52,13 @@ export default function About() {
             { "opacity-0 translate-x-12": !isVisible }
           )}
         >
-          Estate Services Collective is a nationwide network of trusted estate
-          managers delivering discreet, full-spectrum property oversight across
-          the United States. We steward private residences with precision,
-          consistency, care, and ensure each home is maintained, protected, and
-          operating seamlessly, whether occupied or away.
+          We are a national network of trusted estate management professionals
+          providing fractional, full-service oversight of luxury residences and
+          complex estates across the United States. Our collective expertise
+          supports ultra-high-net-worth individuals, multigenerational families,
+          family offices, and luxury builders who require consistent standards,
+          local expertise, and absolute discretion—without the inefficiency of
+          fully staffed, siloed operations.
         </p>
       </div>
     </div>
