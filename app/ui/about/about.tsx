@@ -6,7 +6,7 @@ import CompanyLogo from "../company-logo";
 export default function About() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="w-screen flex justify-center py-16">
+    <div className="w-screen flex justify-center mt-5">
       <div className="max-w-2xl flex flex-col items-center text-center gap-6">
         <div
           ref={ref}

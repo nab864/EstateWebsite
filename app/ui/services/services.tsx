@@ -5,17 +5,22 @@ import clsx from "clsx";
 export default function Services() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="w-screen flex flex-col items-center mt-20 bg-background-secondary py-5">
-      <h1
+    <div className="w-screen flex flex-col items-center mt-15">
+      <div
         ref={ref}
         className={clsx(
-          "text-4xl h-[10vh] w-full text-secondary text-center transition-all duration-2000",
+          "transition-all duration-2000",
           { "opacity-100 translate-y-0": isVisible },
           { "opacity-0 translate-y-12": !isVisible }
         )}
       >
-        Our Signature Services
-      </h1>
+        <h2 className="text-3xl text-primary text-center">
+          Our work is simple in purpose and sophisticated in execution:
+        </h2>
+        <h2 className="text-3xl text-primary text-center">
+          we protect your assets, manage complexity, and give you back time.
+        </h2>
+      </div>
       <ServiceBox />
     </div>
   );

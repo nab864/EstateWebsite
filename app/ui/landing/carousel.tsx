@@ -37,7 +37,7 @@ export default function ImageCarousel({ images, speed = 2 }: ImageCarouselProps)
         style={{ width: "max-content" }}
       >
         {[...images, ...images].map((src, i) => (
-          <Image width={1000} height={1000} src={src} alt={`carousel-item-${i}`} key={i} className="h-full w-auto object-cover border border-primary" />
+          <Image width={1000} height={1000} src={src} alt={`carousel-item-${i}`} key={i} className="h-full w-auto object-cover" />
         ))}
       </div>
     </div>

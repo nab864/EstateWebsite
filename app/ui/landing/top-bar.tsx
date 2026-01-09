@@ -8,13 +8,11 @@ export default function TopBar() {
         </div>
       </div>
 
-      <h1 className="text-center font-serif text-[2rem] tracking-wide text-primary opacity-0 animate-slide-down delay-500">
-        Estate Services Collective
+      <h1 className="text-center font-serif text-[2rem] text-primary opacity-0 animate-slide-down delay-500">
+        Private Estate Network
       </h1>
 
-      <div className="justify-self-end text-sm tracking-widest uppercase text-muted-foreground opacity-0 animate-slide-down delay-3000">
-        Private Estate Management
-      </div>
+    
     </div>
   );
 }
