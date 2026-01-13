@@ -26,7 +26,7 @@ export default function CompanyLogo() {
         className="fill-primary"
       >
         <textPath href="#topTextPath" startOffset="50%" textAnchor="middle">
-          ESTATE SERVICES
+          PRIVATE ESTATE
         </textPath>
       </text>
 
@@ -42,7 +42,7 @@ export default function CompanyLogo() {
         className="fill-primary"
       >
         <textPath href="#bottomTextPath" startOffset="50%" textAnchor="middle">
-          COLLECTIVE
+          NETWORK
         </textPath>
       </text>
 
@@ -55,7 +55,7 @@ export default function CompanyLogo() {
         className="fill-primary"
         letterSpacing="4"
       >
-        ESC
+        PEN
       </text>
     </svg>
   );

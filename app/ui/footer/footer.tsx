@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-semibold text-neutral-100">
-              Colorado Estate Managemnt
+              Private Estate Network
             </h3>
             <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
               Estate & Property Management providing discreet oversight and
