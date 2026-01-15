@@ -1,13 +1,15 @@
+import Video from "../video/video";
 import ImageCarousel from "./carousel";
 import TopBar from "./top-bar";
 
 export default function Landing() {
   return (
-    <div className="h-screen relative flex flex-col">
+    <div className="h-screen flex flex-col">
       <TopBar />
-      <ImageCarousel
-        images={["/house-1.jpg", "/house-2.jpg", "/house-3.jpg"]}
-      />
+      <div className="flex-1 overflow-hidden relative">
+        <Video />
+      </div>
+
       <div
         className="absolute bottom-30 left-30 m-8 flex flex-col items-center animate-slide-right opacity-0"
         style={{ animationDelay: `${1.5}s` }}

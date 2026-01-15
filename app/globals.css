@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3e7c3;
-  --background-secondary: #4e2e1c;
-  --primary: #562e14;
+  --background: #f5f6f4;
+  --background-secondary: #2a2e30;
+  --primary: #2a2e30;
   --secondary: #f3e7c3;
   --secondary-accent: #f6f3ee;
-  --highlight: #6e4d37;
+  --highlight: #2a2e30;
   --map-clickable: #c6a75e;
 }
 
@@ -119,17 +119,6 @@
       scale: 100%;
       fill: var(--map-clickable);
     }
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1c1c1e;
-    --background-secondary: #705922;
-    --primary: #f6f3ee;
-    --secondary: #1c1c1e;
-    --secondary-accent: #f6f3ee;
-    --highlight: #800020;
-    --map-clickable: #c6a75e;
   }
 }
 

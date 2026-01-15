@@ -10,6 +10,7 @@ import Footer from "./ui/footer/footer";
 import About from "./ui/about/about";
 import CompanyLogo from "./ui/company-logo";
 
+
 export default function WelcomeMessage() {
   const [show, setShow] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -45,7 +46,7 @@ export default function WelcomeMessage() {
           className="absolute inset-0 bg-background z-50 opacity-0 animate-blur-in"
           style={{ animationDelay: "3s" }}
         ></div>
-        <div className="opacity-0 animate-blur-in h-[50vh]">
+        <div className="opacity-0 animate-blur-in h-[50vh] mb-10">
           <CompanyLogo />
         </div>
         <span
