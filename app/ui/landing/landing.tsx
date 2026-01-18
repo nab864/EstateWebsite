@@ -4,15 +4,14 @@ import TopBar from "./top-bar";
 
 export default function Landing() {
   return (
-    <div className="h-screen flex flex-col">
-      <TopBar />
+    <div className="h-screen flex flex-col pt-[12vh]">
       <div className="flex-1 overflow-hidden relative">
         <Video />
       </div>
 
       <div
         className="absolute bottom-30 left-30 m-8 flex flex-col items-center animate-slide-right opacity-0"
-        style={{ animationDelay: `${1.5}s` }}
+        style={{ animationDelay: `${5}s` }}
       >
         <h1 className="text-4xl text-[#f6f3ee]">
           Commitment You Feel <br />
