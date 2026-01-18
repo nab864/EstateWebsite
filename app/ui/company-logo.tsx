@@ -1,7 +1,7 @@
 export default function CompanyLogo() {
   return (
     <svg
-      viewBox="-140 20 270 276"
+      viewBox="-160 50 270 280"
       xmlns="http://www.w3.org/2000/svg"
       className="h-full"
     >
