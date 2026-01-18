@@ -2,5 +2,5 @@ export default function Video() {
 
   return (
     <div>
-      <video className="w-full h-full object-cover absolute inset-0" autoPlay playsInline muted loop src="/champagne.mp4"></video>
+      <video className="w-full h-full object-cover absolute inset-0" autoPlay playsInline muted loop src="https://res.cloudinary.com/dewpq5xih/video/upload/v1768776498/champagne_fqjzmq.mp4"></video>
     </div>)}
