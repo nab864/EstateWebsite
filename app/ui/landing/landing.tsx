@@ -1,25 +1,8 @@
-import { useEffect, useState } from "react";
 import Video from "../video/video";
+import ImageCarousel from "./carousel";
+import TopBar from "./top-bar";
 
 export default function Landing() {
-  const [opacity, setOpacity] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const headerHeight = window.innerHeight * 0.12;
-      const startFade = headerHeight * 0.0;
-      const fadeDistance = headerHeight * 6.0;
-
-      const raw = 1 - (scrollY - startFade) / fadeDistance;
-
-      const nextOpacity = Math.min(1, Math.max(0, raw));
-      setOpacity(nextOpacity);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <div className="h-screen flex flex-col pt-[12vh]">
       <div className="flex-1 overflow-hidden relative">
@@ -30,27 +13,13 @@ export default function Landing() {
         className="absolute bottom-30 left-30 m-8 flex flex-col items-center animate-slide-right opacity-0"
         style={{ animationDelay: `${5}s` }}
       >
-        <h1
-          className="text-7xl text-[#f6f3ee] mb-4 font-bold font-serif transition-all duration-100"
-          style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
-        >
-          Private Estate Network
-        </h1>
-        <h2
-          className="text-3xl text-[#f6f3ee] text-center transition-all duration-100"
-          style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
-        >
+        <h1 className="text-4xl text-[#f6f3ee]">
           Commitment You Feel <br />
           in Every Detail
-        </h2>
-        <div className="transition-all duration-100" 
-            style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}>
-          <button
-            className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer"
-          >
-            Find an Estate Manager
-          </button>
-        </div>
+        </h1>
+        <button className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-black transition-colors duration-300 p-1 mt-3 rounded cursor-pointer">
+          Find an Estate Manager
+        </button>
       </div>
     </div>
   );
