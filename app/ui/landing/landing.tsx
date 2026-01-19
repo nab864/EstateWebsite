@@ -22,7 +22,10 @@ export default function Landing() {
   }, []);
   return (
     <div className="h-screen flex flex-col pt-[12vh]">
-      <div className="flex-1 overflow-hidden relative">
+      <div
+        className="flex-1 overflow-hidden relative"
+        style={{ filter: `blur(${(1 - opacity) * 5}px)` }}
+      >
         <Video />
       </div>
 
@@ -43,11 +46,11 @@ export default function Landing() {
           Commitment You Feel <br />
           in Every Detail
         </h2>
-        <div className="transition-all duration-100" 
-            style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}>
-          <button
-            className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer"
-          >
+        <div
+          className="transition-all duration-100"
+          style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
+        >
+          <button className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer">
             Find an Estate Manager
           </button>
         </div>

@@ -9,7 +9,7 @@ export default function ServiceBox() {
   const [activeService, setActiveService] = useState<String>("service-1");
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="flex flex-col items-center text-secondary transition duration-2000 mt-10 h-screen">
+    <div className="flex flex-col items-center flex-1 text-secondary transition duration-2000 mt-10">
       <div id="service-list-top" className="flex justify-between w-[75%]">
         <div
           id="service-1"
@@ -117,12 +117,12 @@ export default function ServiceBox() {
       <div
         ref={ref}
         className={clsx(
-          "flex mx-2 transition-all duration-2000 w-screen pb-5 flex-1 justify-center max-h-[750px]",
+          "flex mx-2 transition-all duration-2000 w-screen pb-5 justify-center h-96",
           { "opacity-100 translate-x-0": isVisible },
           { "opacity-0 translate-x-12": !isVisible }
         )}
       >
-        <div className="w-[45%] flex flex-col mr-2 hover:-translate-y-2 duration-300">
+        <div className="w-[45%] max-w-2xl flex flex-col mr-2">
           <div className="bg-background-secondary rounded-xl p-6 relative h-full">
             {activeService === "service-1" ? (
               <ServiceDescription
@@ -196,13 +196,13 @@ export default function ServiceBox() {
             ) : null}
           </div>
         </div>
-        <div className="relative bg-background-secondary rounded-xl h-full w-1/2 hover:-translate-y-2 duration-300">
+        <div className="bg-background-secondary rounded-xl w-1/2 max-w-2xl relative">
           {activeService === "service-1" ? (
             <Image
               src="/property-management.jpg"
               alt="Property Image"
               fill
-              className={clsx("object-cover animate-slide-left rounded-xl")}
+              className={clsx("animate-blur-in rounded-xl object-cover opacity-0")}
             />
           ) : null}
           {activeService === "service-2" ? (
@@ -210,7 +210,7 @@ export default function ServiceBox() {
               src="/Staffing.png"
               alt="Property Image"
               fill
-              className={clsx("object-cover animate-slide-left rounded-xl")}
+              className={clsx("animate-blur-in rounded-xl object-cover opacity-0")}
             />
           ) : null}
           {activeService === "service-3" ? (
@@ -218,7 +218,7 @@ export default function ServiceBox() {
               src="/seasonal-home.png"
               alt="Property Image"
               fill
-              className={clsx("object-cover animate-slide-left rounded-xl")}
+              className={clsx("animate-blur-in rounded-xl object-cover opacity-0")}
             />
           ) : null}
           {activeService === "service-4" ? (
@@ -226,7 +226,7 @@ export default function ServiceBox() {
               src="/landscaping.jpg"
               alt="Property Image"
               fill
-              className={clsx("object-cover animate-slide-left rounded-xl")}
+              className={clsx("animate-blur-in rounded-xl object-cover opacity-0")}
             />
           ) : null}
           {activeService === "service-5" ? (
@@ -234,7 +234,7 @@ export default function ServiceBox() {
               src="/vehicle-care.png"
               alt="Property Image"
               fill
-              className={clsx("object-cover animate-slide-left rounded-xl")}
+              className={clsx("animate-blur-in rounded-xl object-cover opacity-0")}
             />
           ) : null}
         </div>

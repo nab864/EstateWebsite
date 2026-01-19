@@ -25,7 +25,7 @@
   --animate-slide-right: slide-right 1s ease-in forwards;
   --animate-slide-down: slide-down 1s ease-in forwards;
   --animate-slide-left: slide-left 1s ease-in forwards;
-  --animate-blur-in: blur-in 3s ease-in-out forwards;
+  --animate-blur-in: blur-in 2s ease-in-out forwards;
   --animate-slide-left-out: slide-left-out 5s ease-in-out forwards;
   --animate-slide-up-out: slide-up-out 1s ease-out forwards;
 
@@ -47,12 +47,14 @@
 
   @keyframes blur-in {
     0% {
+      filter: blur(10px)
     }
     50% {
-      opacity: 1;
+      filter: blur(0px)
     }
     100% {
       opacity: 1;
+      
     }
   }
 

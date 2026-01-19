@@ -3,6 +3,7 @@ import { useState } from "react";
 import PersonCard from "./person-card";
 import { useInView } from "../use-in-view-div";
 import clsx from "clsx";
+import Image from "next/image";
 
 export default function Map() {
   const [activeState, setActiveState] = useState<string | null>(null);
@@ -13,10 +14,10 @@ export default function Map() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center mt-20">
+    <div className="w-screen flex flex-col items-center m-1">
       <h1
         className={clsx(
-          "text-4xl h-[10vh] w-full text-primary text-center transition-all duration-2000",
+          "text-4xl w-full text-primary text-center transition-all duration-2000",
           { "opacity-100 translate-y-0": isVisible },
           { "opacity-0 translate-y-12": !isVisible }
         )}
@@ -27,40 +28,12 @@ export default function Map() {
       <div
         ref={ref}
         className={clsx(
-          "flex-1 min-h-0 w-[90%] my-1 transition-all duration-2000",
+          "my-1 transition-all duration-2000",
           { "opacity-100 translate-y-0": isVisible },
           { "opacity-0 translate-y-12": !isVisible }
         )}
       >
-        <div className="w-full max-h-10/12 flex">
-          <MapSVG
-            activeState={activeState}
-            setActiveState={setActiveState}
-            markerClicked={markerClicked}
-            setMarkerClicked={setMarkerClicked}
-            setFadeOutContent={setFadeOutContent}
-            setShowContent={setShowContent}
-            setIsClosing={setIsClosing}
-          />
-
-          <div
-            onTransitionEnd={(e) => {
-              if (e.currentTarget !== e.target) return;
-              if (markerClicked && !isClosing) {
-                setFadeOutContent(false);
-                setShowContent(true);
-              } else if (!markerClicked && isClosing) {
-                setShowContent(false);
-                setFadeOutContent(false);
-                setIsClosing(false);
-              }
-            }}
-            className={`bg-gray-300 transition-all duration-1000 ease-in rounded-r-lg
-                    ${markerClicked ? "w-[75ch]" : "w-0"}`}
-          >
-            {showContent && <PersonCard fadeOutContent={fadeOutContent} />}
-          </div>
-        </div>
+        <Image src={"/united-states-map.jpg"} alt="US Map" width={664} height={443} className="object-contain rounded-xl"/>
       </div>
     </div>
   );
