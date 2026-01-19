@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from "react";
 import Landing from "./ui/landing/landing";
 import Map from "./ui/map/map";
 import Services from "./ui/services/services";
-import Footer from "./ui/footer/footer";
 import About from "./ui/about/about";
 import CompanyLogo from "./ui/company-logo";
 
@@ -52,7 +51,6 @@ export default function Page() {
             <About />
             <Services />
             <Map />
-            <Footer />
           </div>
         ) : null}
       </div>

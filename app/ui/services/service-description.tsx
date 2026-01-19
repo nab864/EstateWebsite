@@ -15,8 +15,12 @@ export default function ServiceDescription({
       <h2 className="text-3xl underline mb-4">{title}</h2>
       <p className="text-xl leading-relaxed mb-6">{body}</p>
 
-      <div className="pl-5 overflow-hidden text-lg">
-        <CyclingList estateServices={estateServices} />
+      <div className="pl-5 text-lg">
+        <ul className="list-disc">
+          {estateServices.map((service) => {
+            return <li>{service}</li>;
+          })}
+        </ul>
       </div>
     </div>
   );

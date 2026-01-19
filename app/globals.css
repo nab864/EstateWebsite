@@ -4,10 +4,11 @@
   --background: #f5f6f4;
   --background-secondary: #2a2e30;
   --primary: #2a2e30;
-  --secondary: #f3e7c3;
+  --secondary: #f5f6f4;
   --secondary-accent: #f6f3ee;
-  --highlight: #2a2e30;
+  --highlight: #f3e7c3;
   --map-clickable: #c6a75e;
+  --holdover: #f3e7c3;
 }
 
 @theme inline {
@@ -25,7 +26,7 @@
   --animate-slide-right: slide-right 1s ease-in forwards;
   --animate-slide-down: slide-down 1s ease-in forwards;
   --animate-slide-left: slide-left 1s ease-in forwards;
-  --animate-blur-in: blur-in 2s ease-in-out forwards;
+  --animate-blur-in: blur-in 1s ease-in-out forwards;
   --animate-slide-left-out: slide-left-out 5s ease-in-out forwards;
   --animate-slide-up-out: slide-up-out 1s ease-out forwards;
 
