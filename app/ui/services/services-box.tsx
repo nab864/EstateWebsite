@@ -23,8 +23,8 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 hover:bg-highlight hover:-translate-y-1 transition-all duration-300 cursor-pointer select-none",
-              { "bg-highlight": activeService === "service-1" },
+              "p-3 hover:bg-highlight hover:rounded-3xl transition-all duration-300 cursor-pointer select-none",
+              { "bg-highlight rounded-3xl": activeService === "service-1" },
               { "bg-background": activeService !== "service-1" },
             )}
           >
@@ -43,8 +43,8 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 hover:bg-highlight hover:-translate-y-1 transition-all duration-300 cursor-pointer select-none",
-              { "bg-highlight": activeService === "service-2" },
+              "p-3 hover:bg-highlight hover:rounded-3xl transition-all duration-300 cursor-pointer select-none",
+              { "bg-highlight rounded-3xl": activeService === "service-2" },
               { "bg-background": activeService !== "service-2" },
             )}
           >
@@ -63,8 +63,8 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 hover:bg-highlight hover:-translate-y-1 transition-all duration-300 cursor-pointer select-none",
-              { "bg-highlight": activeService === "service-3" },
+              "p-3 hover:bg-highlight hover:rounded-3xl transition-all duration-300 cursor-pointer select-none",
+              { "bg-highlight rounded-3xl": activeService === "service-3" },
               { "bg-background": activeService !== "service-3" },
             )}
           >
@@ -83,8 +83,8 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 hover:bg-highlight hover:-translate-y-1  transitionalls duration-300 cursor-pointer select-none",
-              { "bg-highlight": activeService === "service-4" },
+              "p-3 hover:bg-highlight hover:rounded-3xl  transitionalls duration-300 cursor-pointer select-none",
+              { "bg-highlight rounded-3xl": activeService === "service-4" },
               { "bg-background": activeService !== "service-4" },
             )}
           >
@@ -104,8 +104,8 @@ export default function ServiceBox() {
         >
           <div
             className={clsx(
-              "p-3 hover:bg-highlight hover:-translate-y-1 transition-all duration-300 cursor-pointer select-none",
-              { "bg-highlight": activeService === "service-5" },
+              "p-3 hover:bg-highlight hover:rounded-3xl transition-all duration-300 cursor-pointer select-none",
+              { "bg-highlight rounded-3xl": activeService === "service-5" },
               { "bg-background": activeService !== "service-5" },
             )}
           >

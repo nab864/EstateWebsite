@@ -6,7 +6,9 @@ export default function Services() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <div className="w-screen flex flex-col items-center mt-15 bg-background-secondary">
-      <div className={clsx(
+      <div 
+      ref={ref}
+      className={clsx(
                   "transition-all duration-2000 mt-5",
                   { "opacity-100 translate-y-0": isVisible },
                   { "opacity-0 translate-y-12": !isVisible },
