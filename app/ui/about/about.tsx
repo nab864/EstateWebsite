@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useInView } from "../use-in-view-div";
 import clsx from "clsx";
 import CompanyLogo from "../company-logo";
