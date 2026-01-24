@@ -2,7 +2,7 @@ import Link from "next/link";
 import CompanyLogo from "../company-logo";
 export default function TopBar() {
   return (
-    <div className="w-screen grid grid-cols-2 items-center h-[12vh] z-40 fixed bg-background/90 border-b border-primary">
+    <div className="w-screen grid grid-cols-2 items-center h-[12vh] z-40 fixed bg-background border-b border-primary">
       <div className="flex">
         <Link href="/" className="h-[12vh] flex items-center pl-12">
           <CompanyLogo />
