@@ -35,12 +35,15 @@ export default function Page() {
             <div className="opacity-0 animate-blur-in h-[50vh] mb-10">
               <CompanyLogo />
             </div>
-            <span
-              className="animate-blur-in text-primary opacity-0 text-center text-4xl"
+            <h1
+              className="font-serif text-5xl animate-blur-in opacity-0"
               style={{ animationDelay: `${1}s` }}
             >
-              Private Estate Network
-            </span>
+              <span className="text-primary">
+                PRIVATE ESTATE
+                <span className="text-[#396a83]">{" NETWORK"}</span>
+              </span>
+            </h1>
           </div>
         </div>
       ) : null}

@@ -69,22 +69,54 @@ export default function About() {
         ref={text1.ref}
         className={clsx(
           "text-3xl text-primary text-center mt-15 transition-all duration-2000",
-          { "opacity-100 translate-x-0 blur-none": text1.isVisible },
-          { "opacity-0 translate-x-12 blur-lg": !text1.isVisible },
+          { "opacity-100 blur-none": text1.isVisible },
+          { "opacity-0 blur-lg": !text1.isVisible },
         )}
       >
         Our work is simple in purpose and sophisticated in execution:
       </h2>
-      <h2
-        ref={text1.ref}
+      <div
+        ref={text2.ref}
         className={clsx(
-          "text-3xl text-primary text-center transition-all duration-2000",
-          { "opacity-100 translate-x-0 blur-none": text1.isVisible },
-          { "opacity-0 translate-x-12 blur-lg": !text1.isVisible },
+          "flex justify-between text-3xl text-primary mt-10 text-center w-3/4 italic font-bold",
         )}
       >
-        we protect your assets, manage complexity, and give you back time.
-      </h2>
+        <h2
+          className={clsx(
+            {
+              "opacity-100 blur-none animate-flash transition-all duration-2000":
+                text2.isVisible,
+            },
+            { "opacity-0 blur-lg": !text2.isVisible },
+          )}
+        >
+          Protect your Assets
+        </h2>
+        <h2
+          className={clsx(
+            {
+              "opacity-100 blur-none animate-flash transition-all duration-2000":
+                text2.isVisible,
+            },
+            { "opacity-0 blur-lg": !text2.isVisible },
+          )}
+          style={{ animationDelay: `${1.5}s` }}
+        >
+          Manage Complexity
+        </h2>
+        <h2
+          className={clsx(
+            {
+              "opacity-100 blur-none animate-flash transition-all duration-2000":
+                text2.isVisible,
+            },
+            { "opacity-0 blur-lg": !text2.isVisible },
+          )}
+          style={{ animationDelay: `${3}s` }}
+        >
+          Give You Back Time
+        </h2>
+      </div>
     </div>
   );
 }
