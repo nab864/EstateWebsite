@@ -3,16 +3,21 @@ import clsx from "clsx";
 import CompanyLogo from "../company-logo";
 
 export default function About() {
-  const { ref, isVisible } = useInView<HTMLDivElement>();
+  const logo = useInView<HTMLDivElement>();
+  const title = useInView<HTMLDivElement>();
+  const header1 = useInView<HTMLDivElement>();
+  const text1 = useInView<HTMLDivElement>();
+  const text2 = useInView<HTMLDivElement>();
+  const text3 = useInView<HTMLDivElement>();
   return (
-    <div className="w-screen flex flex-col items-center mt-5">
+    <div className="w-screen flex flex-col items-center my-5">
       <div className="max-w-2xl flex flex-col items-center text-center gap-6">
         <div
-          ref={ref}
+          ref={logo.ref}
           className={clsx(
             "transition-all duration-2000",
-            { "opacity-100 translate-x-0": isVisible },
-            { "opacity-0 translate-x-12": !isVisible },
+            { "opacity-100 translate-x-0 blur-none": logo.isVisible },
+            { "opacity-0 translate-x-12 blur-lg": !logo.isVisible },
           )}
         >
           <div className="h-[40vh]">
@@ -21,22 +26,22 @@ export default function About() {
         </div>
 
         <h1
-          ref={ref}
+          ref={title.ref}
           className={clsx(
             "text-4xl font-serif tracking-wide transition-all duration-2000 text-primary",
-            { "opacity-100 translate-x-0": isVisible },
-            { "opacity-0 translate-x-12": !isVisible },
+            { "opacity-100 translate-x-0 blur-none": title.isVisible },
+            { "opacity-0 translate-x-12 blur-lg": !title.isVisible },
           )}
         >
           Private Estate Network
         </h1>
 
         <span
-          ref={ref}
+          ref={title.ref}
           className={clsx(
             "text-sm uppercase tracking-[0.3em] transition-all duration-2000 text-primary",
-            { "opacity-100 translate-x-0": isVisible },
-            { "opacity-0 translate-x-12": !isVisible },
+            { "opacity-100 translate-x-0 blur-none": title.isVisible },
+            { "opacity-0 translate-x-12 blur-lg": !title.isVisible },
           )}
         >
           Fractional Estate & Lifestyle Management for Ultra-High-Net-Worth
@@ -44,11 +49,11 @@ export default function About() {
         </span>
 
         <p
-          ref={ref}
+          ref={title.ref}
           className={clsx(
             "text-base leading-relaxed text-muted-foreground transition-all duration-2000 text-primary",
-            { "opacity-100 translate-x-0": isVisible },
-            { "opacity-0 translate-x-12": !isVisible },
+            { "opacity-100 translate-x-0 blue-none": title.isVisible },
+            { "opacity-0 translate-x-12 blur-lg": !title.isVisible },
           )}
         >
           We are a national network of trusted estate management professionals
@@ -60,10 +65,24 @@ export default function About() {
           fully staffed, siloed operations.
         </p>
       </div>
-      <h2 className="text-3xl text-primary text-center mt-15">
+      <h2
+        ref={text1.ref}
+        className={clsx(
+          "text-3xl text-primary text-center mt-15 transition-all duration-2000",
+          { "opacity-100 translate-x-0 blur-none": text1.isVisible },
+          { "opacity-0 translate-x-12 blur-lg": !text1.isVisible },
+        )}
+      >
         Our work is simple in purpose and sophisticated in execution:
       </h2>
-      <h2 className="text-3xl text-primary text-center">
+      <h2
+        ref={text1.ref}
+        className={clsx(
+          "text-3xl text-primary text-center transition-all duration-2000",
+          { "opacity-100 translate-x-0 blur-none": text1.isVisible },
+          { "opacity-0 translate-x-12 blur-lg": !text1.isVisible },
+        )}
+      >
         we protect your assets, manage complexity, and give you back time.
       </h2>
     </div>

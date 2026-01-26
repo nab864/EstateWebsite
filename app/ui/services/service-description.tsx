@@ -15,7 +15,7 @@ export default function ServiceDescription({
     <div
     ref={ref}
       className={clsx(
-        "transition-all duration-2000 my-30 ",
+        "transition-all duration-2000 bg-background mb-10 p-3 rounded-2xl",
         { "opacity-100 translate-y-0": isVisible },
         { "opacity-0 translate-y-12": !isVisible },
       )}
@@ -23,7 +23,7 @@ export default function ServiceDescription({
       <h2 className="text-3xl underline mb-4 font-serif">{title}</h2>
       <p className="text-xl leading-relaxed mb-6">{body}</p>
 
-      <div className="pl-5 text-lg">
+      <div className="pl-5 text-lg text-[#868685]">
         <ul className="list-disc">
           {estateServices.map((service, i) => {
             return <li key={i}>{service}</li>;

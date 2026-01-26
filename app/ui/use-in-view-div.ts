@@ -12,7 +12,7 @@ export function useInView<T extends HTMLElement>() {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) observer.observe(ref.current);

@@ -6,6 +6,7 @@ import Map from "./ui/map/map";
 import Services from "./ui/services/services";
 import About from "./ui/about/about";
 import CompanyLogo from "./ui/company-logo";
+import Footer from "./ui/footer/footer";
 
 export default function Page() {
   const [show, setShow] = useState(false);
@@ -51,6 +52,7 @@ export default function Page() {
             <About />
             <Services />
             <Map />
+            <Footer />
           </div>
         ) : null}
       </div>

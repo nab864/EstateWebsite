@@ -26,7 +26,14 @@ export default function Services() {
         </div>
       </div>
       <div className="flex w-screen relative">
-        <div className="w-1/2 sticky top-[24vh] h-[calc(100vh-24vh)]">
+        <div
+          ref={ref}
+          className={clsx(
+            "w-1/2 sticky top-[24vh] h-[76vh] transition-all duration-2000",
+            { "opacity-100 translate-x-0": isVisible },
+            { "opacity-0 -translate-x-12": !isVisible },
+          )}
+        >
           <Image
             src={propertyImage}
             alt="Image"

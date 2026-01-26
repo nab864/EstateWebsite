@@ -5,7 +5,7 @@ import { useInView } from "../use-in-view-div";
 export default function ServiceBox() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="text-primary bg-background p-6 mx-6 mb-2">
+    <div className="text-primary mx-6">
       <ServiceDescription
         title="Estate Stewardship"
         body="We oversee every operational aspect of luxury residences—primary
