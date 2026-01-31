@@ -10,6 +10,7 @@ import Footer from "./ui/footer/footer";
 
 export default function Page() {
   const [show, setShow] = useState(false);
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     //localStorage.setItem("hasVisited", "false");
@@ -17,12 +18,18 @@ export default function Page() {
     const hasVisited = localStorage.getItem("hasVisited");
     if (hasVisited === "false") {
       setShow(true);
+      setIsFirstVisit(true);
 
       const timer = setTimeout(() => {
         setShow(false);
-        localStorage.setItem("hasVisited", "true");
       }, 5000);
-      return () => clearTimeout(timer);
+      const timer2 = setTimeout(() => {
+        localStorage.setItem("hasVisited", "true");
+      }, 10000);
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(timer2);
+      };
     }
   }, []);
 
@@ -50,8 +57,8 @@ export default function Page() {
         </div>
       ) : null}
 
-      <div className="" ref={scrollRef}>
-        <Landing />
+      <div>
+        <Landing isFirstVisit={isFirstVisit} />
         {!show ? (
           <div>
             <About />

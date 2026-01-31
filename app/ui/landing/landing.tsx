@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import Video from "../video/video";
 import clsx from "clsx";
 
-export default function Landing() {
+export default function Landing({ isFirstVisit }: { isFirstVisit: boolean }) {
   const [opacity, setOpacity] = useState(1);
-  const hasVisited = localStorage.getItem("hasVisited");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,10 +32,13 @@ export default function Landing() {
 
       <div
         className={clsx(
-          "absolute bottom-30 left-30 m-8 flex flex-col items-center",
-          {"animate-slide-right opacity-0": !hasVisited},
+          "absolute bottom-30 left-30 m-8 flex flex-col items-center animate-slide-right opacity-0",
+          {
+            "animate-slide-right opacity-0": isFirstVisit,
+            "opacity-100": !isFirstVisit
+          }
         )}
-        style={{ animationDelay: `${5}s` }}
+        style={{ animationDelay: isFirstVisit ? "5s" : "0s" }}
       >
         <h1
           className="text-7xl text-[#f6f3ee] mb-4 font-bold font-serif transition-all duration-100"
