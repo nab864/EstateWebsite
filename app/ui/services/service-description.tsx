@@ -17,7 +17,7 @@ export default function ServiceDescription({
       className={clsx(
         "transition-all duration-2000 bg-background mb-10 p-3 rounded-2xl",
         { "opacity-100 translate-y-0": isVisible },
-        { "opacity-0 translate-y-12": !isVisible },
+        { "": !isVisible },
       )}
     >
       <h2 className="text-3xl underline mb-4 font-serif">{title}</h2>

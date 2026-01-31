@@ -8,11 +8,11 @@ export default function Services() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <div className="w-screen flex flex-col items-center bg-background-secondary relative">
-      <div className="z-50 top-[12vh] sticky bg-background-secondary w-full">
+      <div className="z-30 sticky top-[12vh] bg-background-secondary w-full p-2">
         <div
           ref={ref}
           className={clsx(
-            "transition-all duration-2000 my-5 ",
+            "transition-all duration-2000 ",
             { "opacity-100 translate-y-0": isVisible },
             { "opacity-0 translate-y-12": !isVisible },
           )}
@@ -25,11 +25,12 @@ export default function Services() {
           </h2>
         </div>
       </div>
-      <div className="flex w-screen relative">
+
+      <div className="flex w-screen">
         <div
           ref={ref}
           className={clsx(
-            "w-1/2 sticky top-[24vh] h-[76vh] transition-all duration-2000",
+            "w-1/2 sticky top-[calc(12vh+5rem)] h-[calc(88vh-5rem)] transition-all duration-2000 ",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 -translate-x-12": !isVisible },
           )}
