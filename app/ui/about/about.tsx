@@ -10,7 +10,7 @@ export default function About() {
   const text2 = useInView<HTMLDivElement>();
   const text3 = useInView<HTMLDivElement>();
   return (
-    <div className="w-screen flex flex-col items-center my-5">
+    <div className="w-screen flex flex-col items-center mt-5 mb-20">
       <div className="max-w-2xl flex flex-col items-center text-center gap-6">
         <div
           ref={logo.ref}

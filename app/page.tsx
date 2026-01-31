@@ -12,14 +12,16 @@ export default function Page() {
   const [show, setShow] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    localStorage.setItem("hasVisited", "false");
+    //localStorage.setItem("hasVisited", "false");
     scrollRef.current?.scrollTo(0, 0);
     const hasVisited = localStorage.getItem("hasVisited");
     if (hasVisited === "false") {
       setShow(true);
-      localStorage.setItem("hasVisited", "true");
 
-      const timer = setTimeout(() => setShow(false), 5000);
+      const timer = setTimeout(() => {
+        setShow(false);
+        localStorage.setItem("hasVisited", "true");
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, []);
