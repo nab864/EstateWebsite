@@ -6,10 +6,10 @@ import PersonCard from "./person-card";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function Directory({
-  region,
+  state,
   service,
 }: {
-  region: string;
+  state: string;
   service: string;
 }) {
   const [personList, setPersonList] = useState<PersonCardDef[]>(personJSON);
@@ -21,8 +21,8 @@ export default function Directory({
 
   useEffect(() => {
     let filteredList = personList;
-    if (region) {
-      filteredList = personList.filter((entry) => entry.region === region);
+    if (state) {
+      filteredList = personList.filter((entry) => entry.state === state);
     }
     if (service) {
       filteredList = filteredList.filter((entry) =>
@@ -30,14 +30,14 @@ export default function Directory({
       );
     }
     setFilterPersonList(filteredList);
-  }, [region, service]);
+  }, [state, service]);
 
-  const handleRegionSearch = (region: string) => {
+  const handleRegionSearch = (state: string) => {
     const params = new URLSearchParams(searchParams);
-    if (region) {
-      params.set("region", region);
+    if (state) {
+      params.set("state", state);
     } else {
-      params.delete("region");
+      params.delete("state");
     }
     replace(`${pathname}?${params.toString()}`, {scroll: false});
   };
@@ -54,11 +54,11 @@ export default function Directory({
     <div>
       <div className="flex justify-center">
         <select
-          name="region"
-          id="region-select"
+          name="state"
+          id="state-select"
           className="border p-1 w-96"
           onChange={(e) => handleRegionSearch(e.target.value)}
-          value={region}
+          value={state}
         >
           <option value="">Select Region</option>
           <option value="California">California</option>
@@ -118,6 +118,7 @@ export default function Directory({
                 name={person.name}
                 company={person.company}
                 url={person.url}
+                state={person.state}
                 region={person.region}
                 markets={person.markets}
                 services={person.services}

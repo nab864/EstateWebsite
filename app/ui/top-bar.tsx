@@ -17,7 +17,7 @@ export default function TopBar() {
 
       <div className="grid grid-cols-2 justify-self-end pr-12">
         <Link
-          href="/directory"
+          href="/colorado-estate-management"
           className="relative font-serif text-primary
   after:absolute after:left-0 after:-bottom-1
   after:h-px after:w-0 after:bg-current

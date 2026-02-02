@@ -6,6 +6,7 @@ export default function PersonCard({
   name,
   company,
   url,
+  state,
   region,
   markets,
   services,

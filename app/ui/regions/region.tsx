@@ -71,7 +71,7 @@ export default function Region() {
                 style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
               >
                 <Link
-                  href="/directory"
+                  href="/directory?state=Colorado"
                   className="border border-[#f6f3ee] text-[#f6f3ee] px-6 py-2 rounded hover:bg-[#f6f3ee] hover:text-primary transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f6f3ee]"
                 >
                   Find Your Colorado Estate Manager
@@ -711,7 +711,7 @@ export default function Region() {
             white-glove service your properties deserve.
           </p>
           <Link
-            href="/directory"
+            href="/directory?state=Colorado"
             className="inline-block border border-white text-white px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Find an Estate Manager
