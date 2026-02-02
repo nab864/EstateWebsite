@@ -37,7 +37,7 @@ export default function Region() {
             className="object-cover"
             priority
           />
-          {<div className="absolute inset-0 bg-black/35" />}
+          <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="flex flex-col items-center text-center max-w-5xl animate-slide-right opacity-0">
               <h1

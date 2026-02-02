@@ -30,7 +30,7 @@ export default function Services() {
         <div
           ref={ref}
           className={clsx(
-            "w-1/2 sticky top-[calc(12vh+5rem)] h-[calc(88vh-5rem)] transition-all duration-2000 ",
+            "w-1/2 sticky top-[calc(12vh+5rem)] h-[calc(88vh-5rem)] transition-all duration-2000",
             { "opacity-100 translate-x-0": isVisible },
             { "opacity-0 -translate-x-12": !isVisible },
           )}
@@ -42,7 +42,7 @@ export default function Services() {
             sizes="(max-width: 768px) 100vw, 50vw"
             placeholder="blur"
             loading="lazy"
-            className="object-cover animate-blur-in"
+            className="object-cover animate-blur-in rounded-2xl"
           />
         </div>
         <div className="w-1/2">

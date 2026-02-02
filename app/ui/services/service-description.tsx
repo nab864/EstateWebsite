@@ -15,15 +15,15 @@ export default function ServiceDescription({
     <div
     ref={ref}
       className={clsx(
-        "transition-all duration-2000 bg-background mb-10 p-3 rounded-2xl",
+        "transition-all duration-2000 bg-background/10 mb-10 p-3 rounded-2xl",
         { "opacity-100 translate-y-0": isVisible },
         { "": !isVisible },
       )}
     >
-      <h4 className="text-3xl underline mb-4 font-serif">{title}</h4>
-      <p className="text-xl leading-relaxed mb-6">{body}</p>
+      <h4 className="text-3xl underline mb-4 font-serif text-secondary">{title}</h4>
+      <p className="text-xl leading-relaxed mb-6 text-secondary">{body}</p>
 
-      <div className="pl-5 text-lg text-[#868685]">
+      <div className="pl-5 text-lg text-secondary">
         <ul className="list-disc">
           {estateServices.map((service, i) => {
             return <li key={i}>{service}</li>;
