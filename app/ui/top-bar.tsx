@@ -1,8 +1,8 @@
 import Link from "next/link";
-import CompanyLogo from "../company-logo";
+import CompanyLogo from "./company-logo";
 export default function TopBar() {
   return (
-    <div className="w-screen grid grid-cols-2 items-center h-[calc(12vh+1px)] z-40 fixed bg-background border-b border-primary">
+    <div className="w-screen grid grid-cols-2 items-center h-[calc(12vh+1px)] top-0 left-0 z-40 fixed bg-background border-b border-primary">
       <div className="flex">
         <Link href="/" className="h-[12vh] flex items-center pl-12" aria-label="Private Estate Network home">
           <CompanyLogo />
@@ -15,7 +15,17 @@ export default function TopBar() {
         </Link>
       </div>
 
-      <div className="justify-self-end pr-12">
+      <div className="grid grid-cols-2 justify-self-end pr-12">
+        <Link
+          href="/directory"
+          className="relative font-serif text-primary
+  after:absolute after:left-0 after:-bottom-1
+  after:h-px after:w-0 after:bg-current
+  after:transition-all after:duration-300
+  hover:after:w-3/4 select-none"
+        >
+          REGIONS WE SERVE
+        </Link>
         <Link
           href="/directory"
           className="relative font-serif text-primary

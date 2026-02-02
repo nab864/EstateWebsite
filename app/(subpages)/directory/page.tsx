@@ -1,5 +1,5 @@
-import Directory from "../ui/directory/directory";
-import DirectoryHeader from "../ui/directory/directory-header";
+import Directory from "../../ui/directory/directory";
+import DirectoryHeader from "../../ui/directory/directory-header";
 
 export default async function Page(props: {
   searchParams?: Promise<{

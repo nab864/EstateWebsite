@@ -29,8 +29,7 @@ export default function DirectoryHeader() {
           { "opacity-0 translate-x-12": !isVisible },
         )}
       >
-        Browse Our Directory — Explore the best in estate management, local
-        expertise, and services you can rely on, all in one curated collection.
+        Browse Our Directory — Find Elite Estate Management Services in Your Market
       </h1>
     </div>
   );
