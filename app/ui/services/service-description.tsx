@@ -20,7 +20,7 @@ export default function ServiceDescription({
         { "": !isVisible },
       )}
     >
-      <h2 className="text-3xl underline mb-4 font-serif">{title}</h2>
+      <h4 className="text-3xl underline mb-4 font-serif">{title}</h4>
       <p className="text-xl leading-relaxed mb-6">{body}</p>
 
       <div className="pl-5 text-lg text-[#868685]">

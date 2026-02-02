@@ -17,12 +17,12 @@ export default function Services() {
             { "opacity-0 translate-y-12": !isVisible },
           )}
         >
-          <h1 className="text-3xl text-secondary text-center font-serif font-bold">
+          <h2 className="text-3xl text-secondary text-center font-serif font-bold">
             Our Services at a Glance
-          </h1>
-          <h2 className="text-2xl text-[#acadab] text-center italic">
-            How We Support Your Estate
           </h2>
+          <h3 className="text-2xl text-[#acadab] text-center italic">
+            How We Support Your Estate
+          </h3>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export default function Services() {
         >
           <Image
             src={propertyImage}
-            alt="Image"
+            alt="Luxury estate property management and maintenance"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             placeholder="blur"

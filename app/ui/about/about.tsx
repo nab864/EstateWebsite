@@ -25,7 +25,7 @@ export default function About() {
           </div>
         </div>
 
-        <h1
+        <h2
           ref={title.ref}
           className={clsx(
             "text-4xl font-serif tracking-wide transition-all duration-2000 text-primary",
@@ -34,7 +34,7 @@ export default function About() {
           )}
         >
           Private Estate Network
-        </h1>
+        </h2>
 
         <span
           ref={title.ref}
@@ -65,7 +65,7 @@ export default function About() {
           fully staffed, siloed operations.
         </p>
       </div>
-      <h2
+      <h3
         ref={text1.ref}
         className={clsx(
           "text-3xl text-primary text-center mt-15 transition-all duration-2000",
@@ -74,14 +74,14 @@ export default function About() {
         )}
       >
         Our work is simple in purpose and sophisticated in execution:
-      </h2>
+      </h3>
       <div
         ref={text2.ref}
         className={clsx(
           "flex justify-between text-3xl text-primary mt-10 text-center w-3/4 italic font-bold",
         )}
       >
-        <h2
+        <h4
           className={clsx(
             {
               "opacity-100 blur-none animate-flash transition-all duration-2000":
@@ -91,8 +91,8 @@ export default function About() {
           )}
         >
           Protect your Assets
-        </h2>
-        <h2
+        </h4>
+        <h4
           className={clsx(
             {
               "opacity-100 blur-none animate-flash transition-all duration-2000":
@@ -103,8 +103,8 @@ export default function About() {
           style={{ animationDelay: `${1.5}s` }}
         >
           Manage Complexity
-        </h2>
-        <h2
+        </h4>
+        <h4
           className={clsx(
             {
               "opacity-100 blur-none animate-flash transition-all duration-2000":
@@ -115,7 +115,7 @@ export default function About() {
           style={{ animationDelay: `${3}s` }}
         >
           Give You Back Time
-        </h2>
+        </h4>
       </div>
     </div>
   );

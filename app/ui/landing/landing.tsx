@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Video from "../video/video";
 import clsx from "clsx";
 
-export default function Landing({ isFirstVisit }: { isFirstVisit: boolean }) {
+export default function cLanding({ isFirstVisit }: { isFirstVisit: boolean }) {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {

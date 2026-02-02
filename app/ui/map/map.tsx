@@ -6,16 +6,11 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
 export default function Map() {
-  const [activeState, setActiveState] = useState<string | null>(null);
-  const [markerClicked, setMarkerClicked] = useState<Boolean>(false);
-  const [showContent, setShowContent] = useState<Boolean>(false);
-  const [fadeOutContent, setFadeOutContent] = useState<Boolean>(false);
-  const [isClosing, setIsClosing] = useState<Boolean>(false);
   const { ref, isVisible } = useInView<HTMLDivElement>();
 
   return (
     <div className="w-screen flex flex-col items-center mt-5">
-      <h1
+      <h2
         className={clsx(
           "text-4xl w-full text-primary text-center font-serif transition-all duration-2000 mb-5",
           { "opacity-100 translate-y-0": isVisible },
@@ -24,7 +19,7 @@ export default function Map() {
         ref={ref}
       >
         A Trusted Network, Nationwide
-      </h1>
+      </h2>
       <div
         ref={ref}
         className={clsx(
@@ -37,7 +32,7 @@ export default function Map() {
           <div className="relative group hover:rounded-4xl overflow-hidden transition-all duration-200 bg-background-secondary">
             <Image
               src={"/united-states-map.jpg"}
-              alt="US Map"
+              alt="United States coverage map showing Private Estate Network service areas across the country"
               width={664}
               height={443}
               className="hover:opacity-50 transition-opacity duration-200"
