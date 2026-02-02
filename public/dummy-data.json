@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Michael Thompson",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "California",
+    "categories": ["Estate Oversight & Property Maintenance", "Vendor & Contractor Management", "Smart Home & Systems Integration"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Sarah Martinez",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Colorado",
+    "categories": ["Home Watch & Absentee Owner Care", "Emergency Planning & Response"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "David Chen",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Texas",
+    "categories": ["Household Staff & Operations Support", "Lifestyle & Personal Concierge", "Administrative & Owner Reporting"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Jennifer Williams",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Florida",
+    "categories": ["Estate Oversight & Property Maintenance", "Guest Hospitality & Hosting Assistance"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Robert Anderson",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "New York",
+    "categories": ["Project Management & Renovations", "Vendor & Contractor Management", "Estate Strategy & Consulting"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Emily Rodriguez",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "California",
+    "categories": ["Lifestyle & Personal Concierge", "Administrative & Owner Reporting"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "James Patterson",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Colorado",
+    "categories": ["Estate Oversight & Property Maintenance", "Home Watch & Absentee Owner Care", "Emergency Planning & Response"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Amanda Foster",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Texas",
+    "categories": ["Smart Home & Systems Integration", "Project Management & Renovations"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Christopher Lee",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Florida",
+    "categories": ["Household Staff & Operations Support", "Guest Hospitality & Hosting Assistance", "Vendor & Contractor Management"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Nicole Harper",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "New York",
+    "categories": ["Estate Strategy & Consulting", "Administrative & Owner Reporting"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Daniel Brooks",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "California",
+    "categories": ["Home Watch & Absentee Owner Care", "Emergency Planning & Response", "Smart Home & Systems Integration"],
+    "image": "/Andrew-Profile.png"
+  },
+  {
+    "name": "Jessica Morgan",
+    "url": "https://coloradoestatemanagement.com/",
+    "region": "Colorado",
+    "categories": ["Lifestyle & Personal Concierge", "Project Management & Renovations", "Guest Hospitality & Hosting Assistance"],
+    "image": "/Andrew-Profile.png"
+  }
+]
