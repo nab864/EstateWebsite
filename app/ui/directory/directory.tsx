@@ -7,10 +7,10 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 export default function Directory({
   region,
-  category,
+  service,
 }: {
   region: string;
-  category: string;
+  service: string;
 }) {
   const [personList, setPersonList] = useState<PersonCardDef[]>(personJSON);
   const [filterPersonList, setFilterPersonList] =
@@ -24,13 +24,13 @@ export default function Directory({
     if (region) {
       filteredList = personList.filter((entry) => entry.region === region);
     }
-    if (category) {
+    if (service) {
       filteredList = filteredList.filter((entry) =>
-        entry.categories.includes(category),
+        entry.services.includes(service),
       );
     }
     setFilterPersonList(filteredList);
-  }, [region, category]);
+  }, [region, service]);
 
   const handleRegionSearch = (region: string) => {
     const params = new URLSearchParams(searchParams);
@@ -41,12 +41,12 @@ export default function Directory({
     }
     replace(`${pathname}?${params.toString()}`, {scroll: false});
   };
-  const handleCategorySearch = (category: string) => {
+  const handleCategorySearch = (service: string) => {
     const params = new URLSearchParams(searchParams);
-    if (category) {
-      params.set("category", category);
+    if (service) {
+      params.set("service", service);
     } else {
-      params.delete("category");
+      params.delete("service");
     }
     replace(`${pathname}?${params.toString()}`, {scroll: false});
   };
@@ -68,13 +68,13 @@ export default function Directory({
         </select>
 
         <select
-          name="category"
-          id="category-select"
+          name="service"
+          id="service-select"
           className="border p-1 w-96 ml-5"
           onChange={(e) => handleCategorySearch(e.target.value)}
-          value={category}
+          value={service}
         >
-          <option value="">Select Category</option>
+          <option value="">Select Service</option>
           <option value="Estate Oversight & Property Maintenance">
             Estate Oversight & Property Maintenance
           </option>
@@ -116,9 +116,14 @@ export default function Directory({
             <div key={i}>
               <PersonCard
                 name={person.name}
+                company={person.company}
                 url={person.url}
                 region={person.region}
-                categories={person.categories}
+                markets={person.markets}
+                services={person.services}
+                specialties={person.specialties}
+                about={person.about}
+                established={person.established}
                 image={person.image}
                 handleRegionSearch={handleRegionSearch}
                 handleCategorySearch={handleCategorySearch}
