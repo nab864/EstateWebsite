@@ -35,6 +35,7 @@ export default function Map() {
               alt="United States coverage map showing Private Estate Network service areas across the country"
               width={664}
               height={443}
+              loading="lazy"
               className="hover:opacity-50 transition-opacity duration-200"
             />
             <div className="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">

@@ -4,7 +4,7 @@ export default function TopBar() {
   return (
     <div className="w-screen grid grid-cols-2 items-center h-[calc(12vh+1px)] z-40 fixed bg-background border-b border-primary">
       <div className="flex">
-        <Link href="/" className="h-[12vh] flex items-center pl-12">
+        <Link href="/" className="h-[12vh] flex items-center pl-12" aria-label="Private Estate Network home">
           <CompanyLogo />
           <h1 className="font-serif text-[1.1rem]">
             <span className="block text-primary">PRIVATE ESTATE</span>

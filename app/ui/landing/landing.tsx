@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Video from "../video/video";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function cLanding({ isFirstVisit }: { isFirstVisit: boolean }) {
   const [opacity, setOpacity] = useState(1);
@@ -57,9 +58,9 @@ export default function cLanding({ isFirstVisit }: { isFirstVisit: boolean }) {
           className="transition-all duration-100"
           style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
         >
-          <button className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer">
+          <Link href="/directory" className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer focus-visible:bg-[#f6f3ee] focus-visible:text-primary focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary">
             Find an Estate Manager
-          </button>
+          </Link>
         </div>
       </div>
     </div>

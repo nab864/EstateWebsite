@@ -41,6 +41,7 @@ export default function Services() {
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             placeholder="blur"
+            loading="lazy"
             className="object-cover animate-blur-in"
           />
         </div>
