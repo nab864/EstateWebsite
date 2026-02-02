@@ -110,7 +110,7 @@ export default function Directory({
           </option>
         </select>
       </div>
-      <div className="flex flex-wrap mt-2 justify-center">
+      <div className="flex flex-wrap justify-center mt-2 gap">
         {filterPersonList.map((person, i) => {
           return (
             <div key={i}>
@@ -120,6 +120,8 @@ export default function Directory({
                 region={person.region}
                 categories={person.categories}
                 image={person.image}
+                handleRegionSearch={handleRegionSearch}
+                handleCategorySearch={handleCategorySearch}
               />
             </div>
           );

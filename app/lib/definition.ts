@@ -4,4 +4,6 @@ export type PersonCardDef = {
   region: string;
   categories: string[];
   image: string;
+  handleRegionSearch?: (region: string) => void
+  handleCategorySearch?: (category: string) => void
 }

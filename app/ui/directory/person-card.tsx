@@ -8,10 +8,12 @@ export default function PersonCard({
   region,
   categories,
   image,
+  handleRegionSearch,
+  handleCategorySearch,
 }: PersonCardDef) {
   return (
-    <div className="flex flex-col w-96 h-[400px] items-center p-4 text-primary">
-      <div className="w-full h-48 flex items-center justify-center mb-4">
+    <div className="flex flex-col w-96 h-[400px] items-center text-primary">
+      <div className="w-full h-48 flex items-center justify-center">
         <Link
           href={url}
           target="_blank"
@@ -33,17 +35,21 @@ export default function PersonCard({
             {name}
           </h3>
         </Link>
-        <h4 className="text-sm text-gray-600">{region}</h4>
+        <button className="text-sm text-gray-600 cursor-pointer font-semibold hover:text-[#636b6e]"
+        onClick={() => handleRegionSearch?.(region)}>
+          {region}
+        </button>
 
         <div className="flex flex-wrap gap-2 justify-center mt-2">
           {categories.map((category, i) => {
             return (
-              <h5
+              <button
                 key={i}
-                className="text-xs bg-gray-100 px-3 py-1 rounded-full"
+                className="text-xs bg-gray-100 px-3 py-1 rounded-full cursor-pointer hover:text-[#636b6e]"
+                onClick={() => handleCategorySearch?.(category)}
               >
                 {category}
-              </h5>
+              </button>
             );
           })}
         </div>
