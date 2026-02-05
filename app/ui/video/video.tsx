@@ -8,7 +8,8 @@ export default function Video() {
         muted
         loop
         preload="auto"
-        src="https://res.cloudinary.com/dewpq5xih/video/upload/f_auto,q_auto,vc_auto,w_1920/v1768776498/champagne_fqjzmq.mp4"
+        src="https://res.cloudinary.com/dlboibern/video/upload/f_auto,q_auto,vc_auto,w_1920/v1770257029/champagne_fqofx2.mp4"
+        poster="https://res.cloudinary.com/dlboibern/video/upload/f_auto,q_auto,w_800/v1770257029/champagne_fqofx2.jpg"
         aria-label="Luxury estate champagne service video"
       ></video>
     </div>

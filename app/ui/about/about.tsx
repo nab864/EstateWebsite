@@ -78,13 +78,13 @@ export default function About() {
       <div
         ref={text2.ref}
         className={clsx(
-          "flex justify-between text-3xl text-primary mt-10 text-center w-3/4 italic font-bold",
+          "flex flex-col sm:flex-row justify-between items-between text-3xl space-y-5 text-primary mt-10 text-center w-3/4 italic font-bold",
         )}
       >
         <h4
           className={clsx(
             {
-              "opacity-100 blur-none animate-flash transition-all duration-2000":
+              "opacity-100 blur-none transition-all duration-2000":
                 text2.isVisible,
             },
             { "opacity-0 blur-lg": !text2.isVisible },
@@ -95,7 +95,7 @@ export default function About() {
         <h4
           className={clsx(
             {
-              "opacity-100 blur-none animate-flash transition-all duration-2000":
+              "opacity-100 blur-none transition-all duration-2000":
                 text2.isVisible,
             },
             { "opacity-0 blur-lg": !text2.isVisible },
@@ -107,7 +107,7 @@ export default function About() {
         <h4
           className={clsx(
             {
-              "opacity-100 blur-none animate-flash transition-all duration-2000":
+              "opacity-100 blur-none transition-all duration-2000":
                 text2.isVisible,
             },
             { "opacity-0 blur-lg": !text2.isVisible },

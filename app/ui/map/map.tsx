@@ -23,13 +23,13 @@ export default function Map() {
       <div
         ref={ref}
         className={clsx(
-          "my-1 transition-all duration-2000",
+          "my-5 mx-2 transition-all duration-2000",
           { "opacity-100 translate-y-0": isVisible },
           { "opacity-0 translate-y-12": !isVisible },
         )}
       >
         <Link href="/directory" className="">
-          <div className="relative group hover:rounded-4xl overflow-hidden transition-all duration-200 bg-background-secondary">
+          <div className="relative group rounded-4xl sm:rounded-none sm:hover:rounded-4xl overflow-hidden transition-all duration-200 bg-background-secondary">
             <Image
               src={"/united-states-map.jpg"}
               alt="United States coverage map showing Private Estate Network service areas across the country"
@@ -43,7 +43,7 @@ export default function Map() {
                 Find an Estate Manager Near You
               </h3>
             </div>
-            <ArrowRightIcon className="child absolute h-20 text-secondary bottom-0 right-0 translate-14 group-hover:translate-0 transition-transform duration-200" />
+            <ArrowRightIcon className="child absolute h-20 text-secondary bottom-0 right-0 sm:translate-14 group-hover:translate-0 transition-transform duration-200" />
           </div>
         </Link>
       </div>
