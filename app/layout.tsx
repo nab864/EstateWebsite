@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/globals.css";
-import TopBar from "./ui/top-bar";
-import Footer from "./ui/footer/footer";
+
 
 
 const geistSans = Geist({
@@ -83,7 +82,6 @@ export default function RootLayout({
             __html: JSON.stringify(schemaData)
           }}
         />
-        <TopBar />
         {children}
       </body>
     </html>
