@@ -8,7 +8,7 @@ export default function DirectoryHeader() {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <div className="pt-[12vh] w-screen flex flex-col items-center mb-5">
-      <InterMap />
+      {/*<InterMap /> */}
       <div
         ref={ref}
         className={clsx(

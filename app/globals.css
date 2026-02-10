@@ -29,6 +29,7 @@
   --animate-blur-in: blur-in 1s ease-in-out forwards;
   --animate-slide-left-out: slide-left-out 5s ease-in-out forwards;
   --animate-slide-up-out: slide-up-out 1s ease-out forwards;
+  --cursor-custom: url("/company-logo.svg") auto;
 
   @keyframes slide-up-out {
     0% {
