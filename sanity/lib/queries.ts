@@ -39,12 +39,18 @@ export const regionBySlugQuery = groq`
         heading,
         subheading,
         bodyText,
-        columnOneHeading,
-        columnOneBody,
-        columnTwoHeading,
-        columnTwoBody,
-        columnThreeHeading,
-        columnThreeBody,
+        columnOne {
+          heading,
+          body
+        },
+        columnTwo {
+          heading,
+          body
+        },
+        columnThree {
+          heading,
+          body
+        },
         footerText,
       }
     }

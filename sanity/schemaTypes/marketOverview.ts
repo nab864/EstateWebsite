@@ -1,59 +1,44 @@
-import { defineType, defineField } from 'sanity'
+import { defineType, defineField } from "sanity";
 
 export const marketOverviewSection = defineType({
-  name: 'marketOverviewSection',
-  title: 'Market Overview Section',
-  type: 'object',
+  name: "marketOverviewSection",
+  title: "Market Overview Section",
+  type: "object",
   fields: [
     defineField({
-      name: 'heading',
-      title: 'Heading',
-      type: 'string',
+      name: "heading",
+      title: "Heading",
+      type: "string",
     }),
     defineField({
-      name: 'subheading',
-      title: 'Subheading',
-      type: 'string',
+      name: "subheading",
+      title: "Subheading",
+      type: "string",
     }),
     defineField({
-      name: 'bodyText',
-      title: 'Body Text',
-      type: 'text',
+      name: "bodyText",
+      title: "Body Text",
+      type: "text",
     }),
     defineField({
-      name: 'columnOneHeading',
-      title: 'Column One Heading',
-      type: 'string',
+      name: "columnOne",
+      title: "Column One",
+      type: "headingBodySection",
     }),
     defineField({
-      name: 'columnOneBody',
-      title: 'Column One Body',
-      type: 'text',
+      name: "columnTwo",
+      title: "Column Two",
+      type: "headingBodySection",
     }),
     defineField({
-      name: 'columnTwoHeading',
-      title: 'Column Two Heading',
-      type: 'string',
+      name: "columnThree",
+      title: "Column Three",
+      type: "headingBodySection",
     }),
     defineField({
-      name: 'columnTwoBody',
-      title: 'Column Two Body',
-      type: 'text',
-    }),
-    defineField({
-      name: 'columnThreeHeading',
-      title: 'Column Three Heading',
-      type: 'string',
-    }),
-    defineField({
-      name: 'columnThreeBody',
-      title: 'Column Three Body',
-      type: 'text',
-    }),
-    defineField({
-      name: 'footerText',
-      title: 'Footer Text',
-      type: 'text',
+      name: "footerText",
+      title: "Footer Text",
+      type: "text",
     }),
   ],
-})
+});

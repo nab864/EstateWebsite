@@ -1,18 +1,16 @@
-import { HeroSectionProps } from "@/app/lib/definition";
+import { MarketOverviewProps } from "@/app/lib/definition";
 import clsx from "clsx";
 
 export default function MarketOverviewSection({
   heading,
   subheading,
   bodyText,
-  columnOneHeading,
-  columnOneBody,
-  columnTwoHeading,
-  columnTwoBody,
-  columnThreeHeading,
-  columnThreeBody,
+  columnOne,
+  columnTwo,
+  columnThree,
   footerText,
-}: HeroSectionProps) {
+}: MarketOverviewProps) {
+  console.log(columnOne?.body)
   return (
     <section className=" mx-auto px-6 py-20">
       {heading ? (
@@ -33,37 +31,37 @@ export default function MarketOverviewSection({
         <div
           className={clsx("grid gap-10 max-w-4xl", {
             "md:grid-cols-2 ":
-              !columnThreeHeading &&
-              !columnThreeBody &&
-              columnTwoHeading &&
-              columnTwoBody,
-            "md:grid-cols-3 max-w-none": columnThreeHeading && columnThreeBody,
+              !columnThree?.heading &&
+              !columnThree?.body &&
+              columnTwo?.heading &&
+              columnTwo?.body,
+            "md:grid-cols-3 max-w-none": columnThree?.heading && columnThree?.body,
           })}
         >
-          {columnOneHeading && columnOneBody ? (
+          {columnOne?.heading && columnOne?.body ? (
             <div className="bg-background-secondary/10 p-6 rounded-xl space-y-4 leading-relaxed tracking-wide">
               <h4 className="text-xl font-semibold mb-3 flex items-center text-primary">
-                {columnOneHeading}
+                {columnOne?.heading}
               </h4>
-              <p>{columnOneBody}</p>
+              <p>{columnOne?.body}</p>
             </div>
           ) : null}
 
-          {columnTwoHeading && columnTwoBody ? (
+          {columnTwo?.heading && columnTwo?.body ? (
             <div className="bg-background-secondary/10 p-6 rounded-xl space-y-4 leading-relaxed tracking-wide">
               <h4 className="text-xl font-semibold mb-3 flex items-center text-primary">
-                {columnTwoHeading}
+                {columnTwo?.heading}
               </h4>
-              <p>{columnTwoBody}</p>
+              <p>{columnTwo?.body}</p>
             </div>
           ) : null}
 
-          {columnThreeHeading && columnThreeBody ? (
+          {columnThree?.heading && columnThree?.body ? (
             <div className="bg-background-secondary/10 p-6 rounded-xl space-y-4 leading-relaxed tracking-wide">
               <h4 className="text-xl font-semibold mb-3 flex items-center text-primary">
-                {columnThreeHeading}
+                {columnThree?.heading}
               </h4>
-              <p>{columnThreeBody}</p>
+              <p>{columnThree?.body}</p>
             </div>
           ) : null}
         </div>

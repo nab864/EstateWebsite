@@ -27,15 +27,17 @@ export interface HeroSectionProps {
   ctaText?: string;
   ctaLink?: string;
 }
-export interface HeroSectionProps {
+export interface MarketOverviewProps {
   heading?: string;
   subheading?: string;
   bodyText?: any;
-  columnOneHeading?: string;
-  columnOneBody?: string;
-  columnTwoHeading?: string;
-  columnTwoBody?: string;
-  columnThreeHeading?: string;
-  columnThreeBody?: string;
+  columnOne?: HeadingBodyProps;
+  columnTwo?: HeadingBodyProps;
+  columnThree?: HeadingBodyProps;
   footerText?: string;
+}
+
+export interface HeadingBodyProps {
+  heading?: string,
+  body?: string
 }
