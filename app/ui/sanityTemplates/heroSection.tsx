@@ -4,15 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "@/sanity/lib/image";
-
-interface HeroSectionProps {
-  heading?: string;
-  subheading?: string;
-  backgroundImage?: any;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
-}
+import { HeroSectionProps } from "@/app/lib/definition";
 
 export function HeroSection({
   heading,

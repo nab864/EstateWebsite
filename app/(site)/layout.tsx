@@ -1,10 +1,14 @@
+import { client } from "@/sanity/lib/client";
 import TopBar from "../ui/top-bar";
+import { RegionNavItem } from "../lib/definition";
+import { regionNavQuery } from "@/sanity/lib/queries";
 
-export default function Layout({
+export default async function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const regions = await client.fetch<RegionNavItem[]>(regionNavQuery)
   
   return (
     <html lang="en">
@@ -18,7 +22,7 @@ export default function Layout({
       </head>
       <body
       >
-        <TopBar />
+        <TopBar regions={regions}/>
         {children}
       </body>
     </html>

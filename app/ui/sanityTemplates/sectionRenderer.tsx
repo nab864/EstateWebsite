@@ -1,6 +1,7 @@
-import { HeroSection } from './heroSection'
-import { SingleColumnSection } from './singleColumnSection'
-import { TwoColumnSection } from './twoColumnSection'
+import { HeroSection } from "./heroSection";
+import MarketOverviewSection from "./marketOverviewSection";
+import { SingleColumnSection } from "./singleColumnSection";
+import { TwoColumnSection } from "./twoColumnSection";
 
 interface Section {
   _type: string;
@@ -31,6 +32,21 @@ export function SectionRenderer({ sections }: SectionRendererProps) {
                 backgroundImage={section.backgroundImage}
                 ctaText={section.ctaText}
                 ctaLink={section.ctaLink}
+              />
+            );
+          case "marketOverviewSection":
+            return (
+              <MarketOverviewSection
+                key={section._key}
+                subheading={section.subheading}
+                bodyText={section.bodyText}
+                columnOneHeading={section.columnOneHeading}
+                columnOneBody={section.columnOneBody}
+                columnTwoHeading={section.columnTwoHeading}
+                columnTwoBody={section.columnTwoBody}
+                columnThreeHeading={section.columnThreeHeading}
+                columnThreeBody={section.columnThreeBody}
+                footerText={section.footerText}
               />
             );
           case "singleColumnSection":

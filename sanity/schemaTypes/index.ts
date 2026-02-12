@@ -4,6 +4,7 @@ import { twoColumnSection } from "./twoColumn";
 import { regions } from "./regions";
 import { SchemaTypeDefinition } from "sanity";
 import { homePage } from "./homePage";
+import { marketOverviewSection } from "./marketOverview";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -12,5 +13,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     heroSection,
     singleColumnSection,
     twoColumnSection,
+    marketOverviewSection
   ],
 };

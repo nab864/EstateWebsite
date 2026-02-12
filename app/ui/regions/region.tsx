@@ -81,21 +81,21 @@ export default function Region() {
           </div>
         </div>
       </div>
-      <section className=" mx-auto px-6 py-20">
+      <section className="mx-auto py-20">
         <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-4">
           The Colorado Luxury Real Estate Landscape
         </h2>
         <h3 className="text-2xl md:text-3xl text-center text-gray-700 mb-10">
           A Market of Unparalleled Diversity
         </h3>
-        <div className="text-lg md:text-xl text-gray-700 space-y-6 leading-relaxed max-w-4xl mx-auto">
-          <p>
+        <div className="text-lg md:text-xl text-gray-700 space-y-6 leading-relaxed mx-auto flex flex-col items-center">
+          <p className="max-w-4xl">
             Colorado's luxury property market encompasses some of the nation's
             most varied and spectacular real estate.
           </p>
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-background-secondary/10 p-6 rounded-xl space-y-4 leading-relaxed tracking-wide">
-              <h4 className="text-xl font-semibold mb-3 flex items-center text-primary">
+            <div className="bg-background-secondary/10 p-6 rounded-xl leading-relaxed tracking-wide">
+              <h4 className="text-xl font-semibold mb-3 text-primary">
                 Front Range
               </h4>
               <p>
@@ -107,7 +107,7 @@ export default function Region() {
             </div>
 
             <div className="bg-background-secondary/15 p-6 rounded-xl space-y-4 leading-relaxed tracking-wide">
-              <h4 className="text-xl font-semibold mb-3 flex items-center text-primary">
+              <h4 className="text-xl font-semibold mb-3 text-primary">
                 Mountain Communities
               </h4>
               <p>
@@ -118,7 +118,7 @@ export default function Region() {
               </p>
             </div>
           </div>
-          <p>
+          <p className="max-w-4xl">
             This diversity creates unique management challenges. A
             10,000-square-foot Cherry Hills Village estate requires different
             expertise than an 8,500-foot-elevation Breckenridge ski chalet.

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import CompanyLogo from "./company-logo";
-export default function TopBar() {
+import { RegionNavItem } from "../lib/definition";
+export default function TopBar({regions}: {regions: RegionNavItem[]}) {
+  console.log(regions)
   return (
     <div className="w-screen grid grid-cols-2 items-center h-[calc(12vh+1px)] top-0 left-0 z-40 fixed bg-background border-b border-primary">
       <div className="flex">

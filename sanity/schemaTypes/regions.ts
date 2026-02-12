@@ -9,7 +9,7 @@ export const regions = defineType({
       name: "title",
       title: "Page Title",
       type: "string",
-      initialValue: "California Estate Management",
+      initialValue: "Region",
       //readOnly: true,
     }),
     defineField({
@@ -30,9 +30,9 @@ export const regions = defineType({
         { type: "heroSection" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
+        {type: "marketOverviewSection"}
       ],
       options: {
-        // This enables drag-and-drop reordering in the Studio
         sortable: true,
       },
     }),

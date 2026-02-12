@@ -1,10 +1,17 @@
-import { groq } from 'next-sanity'
+import { groq } from "next-sanity";
 
 export const regionSlugsQuery = groq`
   *[_type == "regions" && defined(slug.current)][].slug.current
-`
+`;
 
-export const regionBySlugQuery  = groq`
+export const regionNavQuery = groq`
+  *[_type == "regions" && defined(slug.current)] | order(title asc) {
+    title,
+    "slug": slug.current
+  }
+`;
+
+export const regionBySlugQuery = groq`
   *[_type == "regions" && slug.current == $slug][0] {
     title,
     sections[] {
@@ -27,7 +34,19 @@ export const regionBySlugQuery  = groq`
         title,
         leftColumn,
         rightColumn
+      },
+      _type == "marketOverviewSection" => {
+        heading,
+        subheading,
+        bodyText,
+        columnOneHeading,
+        columnOneBody,
+        columnTwoHeading,
+        columnTwoBody,
+        columnThreeHeading,
+        columnThreeBody,
+        footerText,
       }
     }
   }
-`
+`;
