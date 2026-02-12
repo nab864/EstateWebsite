@@ -43,6 +43,9 @@ export interface HeadingBodyProps {
 }
 
 export interface TwoColumnProps {
+  title: string;
+  inverseColor: boolean;
+  compactColumns: boolean;
   leftColumnTitle: string;
   leftColumn: HeadingBodyProps[];
   rightColumnTitle: string;

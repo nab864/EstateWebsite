@@ -31,10 +31,13 @@ export const regionBySlugQuery = groq`
         content
       },
       _type == "twoColumnSection" => {
+        title,
+        inverseColor,
+        compactColumns,
         leftColumnTitle,
         leftColumn,
         rightColumnTitle,
-        rightColumn
+        rightColumn,
       },
       _type == "marketOverviewSection" => {
         heading,

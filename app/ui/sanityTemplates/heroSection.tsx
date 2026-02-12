@@ -38,7 +38,7 @@ export function HeroSection({
     : null;
 
   return (
-    <div className="min-h-[calc(100vh-12vh)] mt-[12vh] flex flex-col">
+    <div className="min-h-[calc(100vh-12vh)] mt-[12vh] flex flex-col mb-10">
       <div
         className="flex-1 relative overflow-hidden"
         style={{ filter: `blur(${(1 - opacity) * 5}px)` }}

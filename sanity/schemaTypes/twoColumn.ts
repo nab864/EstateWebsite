@@ -6,6 +6,23 @@ export const twoColumnSection = defineType({
   type: 'object',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'inverseColor',
+      title: 'InverseColor',
+      initialValue: false,
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'compactColumns',
+      title: 'Compact Columns',
+      initialValue: false,
+      type: 'boolean',
+    }),
+    defineField({
       name: 'leftColumnTitle',
       title: 'Left Column Title',
       type: 'string',

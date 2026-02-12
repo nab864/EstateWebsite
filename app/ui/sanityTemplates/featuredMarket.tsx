@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function FeaturedMarket({ title, market }: FeaturedMarketProps) {
   return (
-    <section className="mx-auto px-6 py-20 space-y-24 max-w-7xl">
+    <section className="mx-auto px-6 py-10 space-y-24 max-w-7xl">
       <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-16">
         {title}
       </h2>

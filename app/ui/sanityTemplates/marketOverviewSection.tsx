@@ -12,7 +12,7 @@ export default function MarketOverviewSection({
 }: MarketOverviewProps) {
   console.log(columnOne?.body)
   return (
-    <section className=" mx-auto px-6 py-20">
+    <section className="mx-auto px-6 py-10">
       {heading ? (
         <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-4">
           {heading}
