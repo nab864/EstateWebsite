@@ -31,8 +31,9 @@ export const regionBySlugQuery = groq`
         content
       },
       _type == "twoColumnSection" => {
-        title,
+        leftColumnTitle,
         leftColumn,
+        rightColumnTitle,
         rightColumn
       },
       _type == "marketOverviewSection" => {
@@ -52,7 +53,11 @@ export const regionBySlugQuery = groq`
           body
         },
         footerText,
-      }
+      },
+      _type == "featuredMarket" => {
+        title,
+        market
+      },
     }
   }
 `;

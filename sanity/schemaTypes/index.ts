@@ -6,6 +6,9 @@ import { SchemaTypeDefinition } from "sanity";
 import { homePage } from "./homePage";
 import { marketOverviewSection } from "./marketOverview";
 import { headingBodySection } from "./headingBodySection";
+import { featuredMarketAreaSection } from "./featuredMarketAreaSection";
+import { featuredMarketSubsection } from "./featuredMartketSubsection";
+import { featuredMarket } from "./featuredMarkets";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -15,6 +18,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     singleColumnSection,
     twoColumnSection,
     headingBodySection,
-    marketOverviewSection
+    marketOverviewSection,
+    featuredMarket,
+    featuredMarketAreaSection,
+    featuredMarketSubsection
   ],
 };

@@ -38,6 +38,29 @@ export interface MarketOverviewProps {
 }
 
 export interface HeadingBodyProps {
-  heading?: string,
+  heading?: string;
   body?: string
+}
+
+export interface TwoColumnProps {
+  leftColumnTitle: string;
+  leftColumn: HeadingBodyProps[];
+  rightColumnTitle: string;
+  rightColumn: HeadingBodyProps[];
+}
+
+export interface FeaturedMarketProps {
+  title: string;
+  market: FeaturedMarketArea[];
+}
+
+export interface FeaturedMarketArea {
+  heading: string;
+  section:FeaturedMarketSubsection[]
+}
+export interface FeaturedMarketSubsection {
+  heading: string;
+  subheading: string;
+  list: string[];
+  backgroundImage: any;
 }

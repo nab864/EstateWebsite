@@ -6,21 +6,26 @@ export const twoColumnSection = defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Section Title',
+      name: 'leftColumnTitle',
+      title: 'Left Column Title',
       type: 'string',
     }),
     defineField({
       name: 'leftColumn',
       title: 'Left Column',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'headingBodySection' }],
+    }),
+    defineField({
+      name: 'rightColumnTitle',
+      title: 'Right Column Title',
+      type: 'string',
     }),
     defineField({
       name: 'rightColumn',
       title: 'Right Column',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'headingBodySection' }],
     }),
   ],
 })

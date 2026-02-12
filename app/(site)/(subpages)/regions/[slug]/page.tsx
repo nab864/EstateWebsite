@@ -6,6 +6,7 @@ import { HeroSection } from "@/app/ui/sanityTemplates/heroSection";
 import { SingleColumnSection } from "@/app/ui/sanityTemplates/singleColumnSection";
 import { TwoColumnSection } from "@/app/ui/sanityTemplates/twoColumnSection";
 import MarketOverviewSection from "@/app/ui/sanityTemplates/marketOverviewSection";
+import { FeaturedMarket } from "@/app/ui/sanityTemplates/featuredMarket";
 
 // Generate static params for all regions
 export async function generateStaticParams() {
@@ -56,6 +57,8 @@ export default async function RegionPage({
             return <TwoColumnSection key={section._key} {...section} />;
           case "marketOverviewSection":
             return <MarketOverviewSection key={section._key} {...section} />;
+          case "featuredMarket":
+            return <FeaturedMarket key={section._key} {...section} />;
           default:
             return null;
         }

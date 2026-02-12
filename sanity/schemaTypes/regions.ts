@@ -30,7 +30,8 @@ export const regions = defineType({
         { type: "heroSection" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
-        {type: "marketOverviewSection"}
+        { type: "marketOverviewSection" },
+        { type: "featuredMarket" },
       ],
       options: {
         sortable: true,

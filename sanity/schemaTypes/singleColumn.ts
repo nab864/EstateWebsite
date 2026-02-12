@@ -14,7 +14,7 @@ export const singleColumnSection = defineType({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'headingBodySection' }],
     }),
   ],
 })

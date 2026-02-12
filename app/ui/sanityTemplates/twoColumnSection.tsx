@@ -1,28 +1,56 @@
-import { PortableText } from '@portabletext/react'
-import type { PortableTextBlock } from '@portabletext/types'
+import { TwoColumnProps } from "@/app/lib/definition";
 
-interface TwoColumnSectionProps {
-  title?: string
-  leftColumn: PortableTextBlock[]
-  rightColumn: PortableTextBlock[]
-}
-
-export function TwoColumnSection({ title, leftColumn, rightColumn }: TwoColumnSectionProps) {
+export function TwoColumnSection({
+  leftColumnTitle,
+  leftColumn,
+  rightColumnTitle,
+  rightColumn,
+}: TwoColumnProps) {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        {title && (
-          <h2 className="text-3xl font-bold mb-12 text-center">{title}</h2>
-        )}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="prose prose-lg">
-            <PortableText value={leftColumn} />
+    <section>
+      <div className="grid md:grid-cols-2 gap-12">
+        <div className="bg-background-secondary/10 p-8 rounded-xl shadow-lg space-y-6">
+          <h3 className="text-2xl font-semibold text-primary mb-4">
+            {leftColumnTitle}
+          </h3>
+
+          <div className="space-y-4">
+            {leftColumn.map((section) => {
+              return (
+                <div>
+                  <h4 className="font-semibold text-gray-800">
+                    {section.heading}
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    {section.body}
+                  </p>
+                </div>
+              );
+            })}
           </div>
-          <div className="prose prose-lg">
-            <PortableText value={rightColumn} />
+        </div>
+
+        <div className="bg-background-secondary/15 p-8 rounded-xl shadow-lg space-y-6">
+          <h3 className="text-2xl font-semibold text-primary mb-4">
+            {rightColumnTitle}
+          </h3>
+
+          <div className="space-y-4">
+            {rightColumn.map((section) => {
+              return (
+                <div>
+                  <h4 className="font-semibold text-gray-800">
+                    {section.heading}
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    {section.body}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
