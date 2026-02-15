@@ -8,6 +8,8 @@ import { TwoColumnSection } from "@/app/ui/sanityTemplates/twoColumnSection";
 import MarketOverviewSection from "@/app/ui/sanityTemplates/marketOverviewSection";
 import { FeaturedMarket } from "@/app/ui/sanityTemplates/featuredMarket";
 import { draftMode } from "next/headers";
+import { ThreePerRow } from "@/app/ui/sanityTemplates/threePerRow";
+import { CTASection } from "@/app/ui/sanityTemplates/ctaSection";
 
 // Optional: Generate metadata
 export async function generateMetadata({
@@ -58,6 +60,10 @@ export default async function RegionPage({
             return <MarketOverviewSection key={section._key} {...section} />;
           case "featuredMarket":
             return <FeaturedMarket key={section._key} {...section} />;
+          case "threePerRowSection":
+            return <ThreePerRow key={section._key} {...section} />;
+          case "ctaSection":
+            return <CTASection key={section._key} {...section} />;
           default:
             return null;
         }

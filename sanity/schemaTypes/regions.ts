@@ -32,6 +32,8 @@ export const regions = defineType({
         { type: "twoColumnSection" },
         { type: "marketOverviewSection" },
         { type: "featuredMarket" },
+        { type: "threePerRowSection"},
+        { type: "ctaSection"},
       ],
       options: {
         sortable: true,

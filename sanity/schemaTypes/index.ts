@@ -9,6 +9,9 @@ import { headingBodySection } from "./headingBodySection";
 import { featuredMarketAreaSection } from "./featuredMarketAreaSection";
 import { featuredMarketSubsection } from "./featuredMartketSubsection";
 import { featuredMarket } from "./featuredMarkets";
+import { threePerRowSection } from "./threePerRow";
+import { ctaSection } from "./ctaSection";
+
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -21,6 +24,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     marketOverviewSection,
     featuredMarket,
     featuredMarketAreaSection,
-    featuredMarketSubsection
+    featuredMarketSubsection,
+    threePerRowSection,
+    ctaSection,
   ],
 };

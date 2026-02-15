@@ -10,13 +10,13 @@ export type PersonCardDef = {
   about: string;
   established: number;
   image: string;
-  handleRegionSearch?: (region: string) => void
-  handleCategorySearch?: (category: string) => void
-}
+  handleRegionSearch?: (region: string) => void;
+  handleCategorySearch?: (category: string) => void;
+};
 
 export interface RegionNavItem {
-  title: string
-  slug: string
+  title: string;
+  slug: string;
 }
 
 export interface HeroSectionProps {
@@ -39,7 +39,7 @@ export interface MarketOverviewProps {
 
 export interface HeadingBodyProps {
   heading?: string;
-  body?: string
+  body?: string;
 }
 
 export interface TwoColumnProps {
@@ -59,11 +59,22 @@ export interface FeaturedMarketProps {
 
 export interface FeaturedMarketArea {
   heading: string;
-  section:FeaturedMarketSubsection[]
+  section: FeaturedMarketSubsection[];
 }
 export interface FeaturedMarketSubsection {
   heading: string;
   subheading: string;
   list: string[];
   backgroundImage: any;
+}
+
+export interface ThreePerRownProps {
+  title: string;
+  bodyList: HeadingBodyProps[];
+}
+
+export interface CTAProps {
+  mainSection: HeadingBodyProps;
+  ctaText: string;
+  ctaLink: string;
 }

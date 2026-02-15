@@ -61,6 +61,15 @@ export const regionBySlugQuery = groq`
         title,
         market
       },
+      _type == "threePerRowSection" => {
+        title,
+        bodyList
+      },
+      _type == "ctaSection" => {
+        mainSection,
+        ctaText,
+        ctaLink
+      },
     }
   }
 `;
