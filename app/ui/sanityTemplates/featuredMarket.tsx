@@ -9,19 +9,24 @@ export function FeaturedMarket({ title, market }: FeaturedMarketProps) {
         {title}
       </h2>
 
-      {market.map((market) => {
+      {market.map((market, index) => {
         return (
-          <div className="space-y-12">
+          <div className="space-y-12" key={index}>
             <h3 className="text-3xl font-semibold text-gray-800 mb-6">
               {market.heading}
             </h3>
 
             {market.section.map((section, index) => {
               return (
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className={clsx("space-y-4", {
-                    "order-2": index % 2
-                  })}>
+                <div
+                  className="grid md:grid-cols-2 gap-8 items-center"
+                  key={index}
+                >
+                  <div
+                    className={clsx("space-y-4", {
+                      "order-2": index % 2,
+                    })}
+                  >
                     <h4 className="text-xl font-semibold text-primary">
                       {section.heading}
                     </h4>
@@ -29,8 +34,8 @@ export function FeaturedMarket({ title, market }: FeaturedMarketProps) {
                       {section.subheading}
                     </p>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">
-                      {section.list.map((item) => {
-                        return <li>{item}</li>;
+                      {section.list.map((item, index) => {
+                        return <li key={index}>{item}</li>;
                       })}
                     </ul>
                   </div>

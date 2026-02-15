@@ -1,5 +1,5 @@
 import { client } from "@/sanity/lib/client";
-import { regionBySlugQuery, regionSlugsQuery } from "@/sanity/lib/queries";
+import { regionBySlugQuery } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 
 import { HeroSection } from "@/app/ui/sanityTemplates/heroSection";
@@ -7,15 +7,7 @@ import { SingleColumnSection } from "@/app/ui/sanityTemplates/singleColumnSectio
 import { TwoColumnSection } from "@/app/ui/sanityTemplates/twoColumnSection";
 import MarketOverviewSection from "@/app/ui/sanityTemplates/marketOverviewSection";
 import { FeaturedMarket } from "@/app/ui/sanityTemplates/featuredMarket";
-
-// Generate static params for all regions
-export async function generateStaticParams() {
-  const slugs = await client.fetch<string[]>(regionSlugsQuery);
-
-  return slugs.map((slug) => ({
-    slug,
-  }));
-}
+import { draftMode } from "next/headers";
 
 // Optional: Generate metadata
 export async function generateMetadata({
@@ -39,7 +31,14 @@ export default async function RegionPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const region = await client.fetch(regionBySlugQuery, { slug });
+  const { isEnabled } = await draftMode();
+  const region = await client.fetch(
+    regionBySlugQuery,
+    { slug },
+    isEnabled
+      ? { perspective: "drafts", useCdn: false, stega: true }
+      : undefined,
+  );
 
   if (!region) {
     notFound();

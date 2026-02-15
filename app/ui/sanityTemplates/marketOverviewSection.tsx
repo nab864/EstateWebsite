@@ -10,7 +10,6 @@ export default function MarketOverviewSection({
   columnThree,
   footerText,
 }: MarketOverviewProps) {
-  console.log(columnOne?.body)
   return (
     <section className="mx-auto px-6 py-10">
       {heading ? (

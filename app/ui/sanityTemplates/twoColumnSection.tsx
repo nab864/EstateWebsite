@@ -18,7 +18,11 @@ export function TwoColumnSection({
       })}
     >
       {title ? (
-        <h2 className={clsx("text-4xl md:text-5xl font-serif text-center mb-5", { "text-secondary": inverseColor})}>
+        <h2
+          className={clsx("text-4xl md:text-5xl font-serif text-center mb-5", {
+            "text-secondary": inverseColor,
+          })}
+        >
           {title}
         </h2>
       ) : null}
@@ -39,10 +43,12 @@ export function TwoColumnSection({
           ) : null}
 
           <div className="space-y-6">
-            {leftColumn.map((section) => {
+            {leftColumn.map((section, index) => {
               return (
-                <div>
-                  <h4 className="font-semibold mb-2 text-xl">{section.heading}</h4>
+                <div key={index}>
+                  <h4 className="font-semibold mb-2 text-xl">
+                    {section.heading}
+                  </h4>
                   <p
                     className={clsx("leading-relaxed", {
                       "text-primary/80": !inverseColor,
@@ -69,10 +75,12 @@ export function TwoColumnSection({
           ) : null}
 
           <div className="space-y-6">
-            {rightColumn.map((section) => {
+            {rightColumn.map((section, index) => {
               return (
-                <div>
-                  <h4 className="font-semibold text-xl mb-2">{section.heading}</h4>
+                <div key={index}>
+                  <h4 className="font-semibold text-xl mb-2">
+                    {section.heading}
+                  </h4>
                   <p
                     className={clsx("leading-relaxed", {
                       "text-primary/80": !inverseColor,

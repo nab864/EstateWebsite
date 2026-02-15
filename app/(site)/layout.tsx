@@ -1,7 +1,10 @@
 import { client } from "@/sanity/lib/client";
+import { VisualEditing } from "next-sanity/visual-editing";
 import TopBar from "../ui/top-bar";
 import { RegionNavItem } from "../lib/definition";
 import { regionNavQuery } from "@/sanity/lib/queries";
+import { draftMode } from "next/headers";
+import { DisableDraftMode } from "../ui/disable-draft-mode";
 
 export default async function Layout({
   children,
@@ -24,6 +27,12 @@ export default async function Layout({
       >
         <TopBar regions={regions}/>
         {children}
+        {(await draftMode()).isEnabled && (
+          <>
+            <VisualEditing />
+            <DisableDraftMode />
+          </>
+        )}
       </body>
     </html>
   );
