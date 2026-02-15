@@ -1,8 +1,5 @@
-import { client } from "@/sanity/lib/client";
 import { VisualEditing } from "next-sanity/visual-editing";
-import TopBar from "../ui/top-bar";
-import { RegionNavItem } from "../lib/definition";
-import { regionNavQuery } from "@/sanity/lib/queries";
+import TopBar from "../ui/top-bar/top-bar";
 import { draftMode } from "next/headers";
 import { DisableDraftMode } from "../ui/disable-draft-mode";
 
@@ -11,7 +8,6 @@ export default async function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const regions = await client.fetch<RegionNavItem[]>(regionNavQuery)
   
   return (
     <html lang="en">
@@ -23,9 +19,8 @@ export default async function Layout({
           type="video/mp4"
         />
       </head>
-      <body
-      >
-        <TopBar regions={regions}/>
+      <body>
+        <TopBar />
         {children}
         {(await draftMode()).isEnabled && (
           <>

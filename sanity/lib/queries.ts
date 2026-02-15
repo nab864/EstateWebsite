@@ -1,9 +1,5 @@
 import { groq } from "next-sanity";
 
-export const regionSlugsQuery = groq`
-  *[_type == "regions" && defined(slug.current)][].slug.current
-`;
-
 export const regionNavQuery = groq`
   *[_type == "regions" && defined(slug.current)] | order(title asc) {
     title,
