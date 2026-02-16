@@ -11,8 +11,9 @@ import { featuredMarketSubsection } from "./featuredMartketSubsection";
 import { featuredMarket } from "./featuredMarkets";
 import { threePerRowSection } from "./threePerRow";
 import { ctaSection } from "./ctaSection";
-import { heroSectionVideo } from "./heroSectionVideo";
+import { heroVideoSection } from "./heroVideoSection";
 import { imageStickySection } from "./imageStickySection";
+import { ctaSectionImage } from "./ctaSectionImage";
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -20,7 +21,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     homePage,
     regions,
     heroSection,
-    heroSectionVideo,
+    heroVideoSection,
     singleColumnSection,
     twoColumnSection,
     headingBodySection,
@@ -30,6 +31,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     featuredMarketSubsection,
     threePerRowSection,
     ctaSection,
+    ctaSectionImage,
     imageStickySection,
   ],
 };

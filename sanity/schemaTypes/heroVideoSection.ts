@@ -1,10 +1,15 @@
 import { defineType, defineField } from 'sanity'
 
-export const heroSectionVideo = defineType({
-  name: 'heroSectionVideo',
-  title: 'Hero Section Video',
+export const heroVideoSection = defineType({
+  name: 'heroVideoSection',
+  title: 'Hero Video Section',
   type: 'object',
   fields: [
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
     defineField({
       name: 'heading',
       title: 'Heading',

@@ -9,7 +9,7 @@ export const homePage = defineType({
       name: "title",
       title: "Page Title",
       type: "string",
-      initialValue: "Home Page",
+      initialValue: "Home",
       readOnly: true,
     }),
     defineField({
@@ -18,13 +18,15 @@ export const homePage = defineType({
       type: "array",
       of: [
         { type: "heroSection" },
-        { type: "heroSectionVideo" },
+        { type: "heroVideoSection" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
         { type: "marketOverviewSection" },
         { type: "featuredMarket" },
-        { type: "threePerRowSection"},
-        { type: "ctaSection"},
+        { type: "threePerRowSection" },
+        { type: "ctaSection" },
+        { type: "ctaSectionImage" },
+        { type: "imageStickySection" },
       ],
       options: {
         // This enables drag-and-drop reordering in the Studio
@@ -32,4 +34,11 @@ export const homePage = defineType({
       },
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Home Page'
+      }
+    }
+  }
 });

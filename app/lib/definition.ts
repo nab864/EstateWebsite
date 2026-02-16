@@ -27,6 +27,16 @@ export interface HeroSectionProps {
   ctaText?: string;
   ctaLink?: string;
 }
+export interface HeroVideoSectionProps {
+  heading?: string;
+  subheading?: string;
+  backgroundVideo?: string;
+  backgroundVideoAltText?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  isFirstVisit?: boolean;
+}
 export interface MarketOverviewProps {
   heading?: string;
   subheading?: string;
@@ -90,6 +100,13 @@ export interface CTAProps {
   mainSection: HeadingBodyProps;
   ctaText: string;
   ctaLink: string;
+}
+export interface CTAImageProps {
+  mainSection: string;
+  ctaText: string;
+  ctaLink: string;
+  ctaImage: any;
+  ctaImageAlt: string;
 }
 
 export interface ImageStickyProps {

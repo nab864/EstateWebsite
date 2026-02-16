@@ -11,7 +11,7 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema } from "./sanity/schemaTypes";
 import { structure } from "./sanity/structure";
-import { presentationTool } from "sanity/presentation";
+import { defineLocations, presentationTool } from "sanity/presentation";
 
 export default defineConfig({
   basePath: "/studio",
@@ -27,6 +27,24 @@ export default defineConfig({
         preview: "/",
         previewMode: {
           enable: "/api/draft-mode/enable",
+        },
+      },
+      resolve: {
+        locations: {
+          // Home Page
+          homePage: defineLocations({
+            select: {
+              title: "Home",
+            },
+            resolve: (doc) => ({
+              locations: [
+                {
+                  title: doc?.title || "Home",
+                  href: "/",
+                },
+              ],
+            }),
+          }),
         },
       },
     }),

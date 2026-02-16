@@ -1,6 +1,6 @@
 import { defineType, defineField } from "sanity";
 
-export const ctaSection = defineType({
+export const ctaSectionImage = defineType({
   name: "ctaSectionImage",
   title: "CTA Section with Image",
   type: "object",
@@ -15,7 +15,7 @@ export const ctaSection = defineType({
     defineField({
       name: "mainSection",
       title: "Main Section",
-      type: "headingBodySection",
+      type: "string",
     }),
     defineField({
       name: "ctaText",

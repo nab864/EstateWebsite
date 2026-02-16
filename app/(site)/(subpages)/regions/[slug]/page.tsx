@@ -11,6 +11,7 @@ import { draftMode } from "next/headers";
 import { ThreePerRow } from "@/app/ui/sanityTemplates/threePerRow";
 import { CTASection } from "@/app/ui/sanityTemplates/ctaSection";
 import ImageStickySection from "@/app/ui/sanityTemplates/imageStickySection";
+import { CTAImageSection } from "@/app/ui/sanityTemplates/ctaImageSection";
 
 // Optional: Generate metadata
 export async function generateMetadata({
@@ -67,6 +68,8 @@ export default async function RegionPage({
             return <CTASection key={section._key} {...section} />;
           case "imageStickySection":
             return <ImageStickySection key={section._key} {...section} />;
+          case "ctaSectionImage":
+            return <CTAImageSection key={section._key} {...section} />;
           default:
             return null;
         }

@@ -28,13 +28,14 @@ export const regions = defineType({
       type: "array",
       of: [
         { type: "heroSection" },
-        { type: "heroSectionVideo" },
+        { type: "heroVideoSection" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
         { type: "marketOverviewSection" },
         { type: "featuredMarket" },
         { type: "threePerRowSection"},
         { type: "ctaSection"},
+        { type: "ctaSectionImage"},
         { type: "imageStickySection"},
       ],
       options: {

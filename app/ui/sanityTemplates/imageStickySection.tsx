@@ -13,7 +13,6 @@ export default function ImageStickySection({
   stickyImageAlt,
   list,
 }: ImageStickyProps) {
-  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <div className="w-screen flex flex-col items-center bg-background-secondary relative">
       <div className="z-30 sticky top-[12vh] bg-background-secondary w-full p-2">

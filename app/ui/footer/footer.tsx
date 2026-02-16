@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-neutral-950 text-neutral-300">
+    <div className="bg-neutral-950 text-neutral-300">
       <div className="max-w-[1400px] mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
@@ -48,6 +48,6 @@ export default function Footer() {
           <span>© 2026 Company Name. All rights reserved.</span>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
