@@ -1,22 +1,76 @@
-import { PortableText } from '@portabletext/react'
-import type { PortableTextBlock } from '@portabletext/types'
+"use client";
+import { SingleColumnProps } from "@/app/lib/definition";
+import clsx from "clsx";
+import { useInView } from "../use-in-view-div";
+import CompanyLogo from "../company-logo";
 
-interface SingleColumnSectionProps {
-  title?: string
-  content: PortableTextBlock[]
-}
-
-export function SingleColumnSection({ title, content }: SingleColumnSectionProps) {
+export function SingleColumnSection({
+  useLogo,
+  inverseColor,
+  mainHeading,
+  subHeading,
+  body,
+  missionStatementBeginning,
+  missionStatementOne,
+  missionStatementTwo,
+  missionStatementThree,
+}: SingleColumnProps) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-4xl">
-        {title && (
-          <h2 className="text-3xl font-bold mb-8 text-center">{title}</h2>
+    <section className="w-screen flex flex-col items-center mt-5 mb-20">
+      <div className="max-w-2xl flex flex-col items-center text-center gap-6">
+        {useLogo && (
+          <div className={clsx("transition-all duration-2000")}>
+            <div className="h-[40vh]">
+              <CompanyLogo />
+            </div>
+          </div>
         )}
-        <div className="prose prose-lg max-w-none">
-          <PortableText value={content} />
-        </div>
+
+        {mainHeading ? (
+          <h2
+            className={clsx(
+              "text-4xl font-serif text-center tracking-wide text-primary",
+            )}
+          >
+            {mainHeading.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()}
+          </h2>
+        ) : null}
+
+        {subHeading ? (
+          <h3
+            className={clsx(
+              "text-sm uppercase tracking-[0.3em] transition-all duration-2000 text-primary",
+            )}
+          >
+            {subHeading.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()}
+          </h3>
+        ) : null}
+
+        <p
+          className={clsx(
+            "text-base leading-relaxed text-muted-foreground transition-all duration-2000 text-primary",
+          )}
+        >
+          {body && body}
+        </p>
+      </div>
+      <h3
+        className={clsx(
+          "text-3xl text-primary text-center mt-15 transition-all duration-2000",
+        )}
+      >
+        {missionStatementBeginning && missionStatementBeginning}
+      </h3>
+      <div
+        className={clsx(
+          "flex flex-col sm:flex-row justify-between items-between text-3xl space-y-5 text-primary mt-10 text-center w-3/4 italic font-bold",
+        )}
+      >
+        <h4>{missionStatementOne && missionStatementOne}</h4>
+        <h4>{missionStatementTwo && missionStatementTwo}</h4>
+        <h4>{missionStatementThree && missionStatementThree}</h4>
       </div>
     </section>
-  )
+  );
 }

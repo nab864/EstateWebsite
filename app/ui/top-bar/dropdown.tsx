@@ -18,7 +18,7 @@ export default function DropDownMenu({
             after:absolute after:left-0 after:-bottom-1
             after:h-px after:bg-current
             after:transition-all after:duration-300
-            select-none
+            select-none focus:not-data-focus:outline-none
             ${open ? "after:w-full" : "after:w-0 group-hover:after:w-full"}`}
           >
             REGIONS WE SERVE

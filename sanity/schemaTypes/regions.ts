@@ -28,6 +28,7 @@ export const regions = defineType({
       type: "array",
       of: [
         { type: "heroSection" },
+        { type: "heroSectionVideo" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
         { type: "marketOverviewSection" },

@@ -29,5 +29,10 @@ export const featuredMarketSubsection = defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'backgroundImageAltText',
+      title: 'Background Image Alt Text',
+      type: 'string',
+    }),
   ],
 });

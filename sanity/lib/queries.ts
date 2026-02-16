@@ -18,13 +18,30 @@ export const regionBySlugQuery = groq`
         subheading,
         description,
         backgroundImage,
+        backgroundImageAltText,
+        ctaText,
+        ctaLink
+      },
+      _type == "heroSectionVideo" => {
+        heading,
+        subheading,
+        description,
+        backgroundVideo,
+        backgroundVideoAltText,
         ctaText,
         ctaLink
       },
       
       _type == "singleColumnSection" => {
         title,
-        content
+        useLogo,
+        mainHeading,
+        subHeading,
+        body,
+        missionStatementBeginning,
+        missionStatementOne,
+        missionStatementTwo,
+        missionStatementThree,
       },
       _type == "twoColumnSection" => {
         title,

@@ -11,6 +11,7 @@ import { featuredMarketSubsection } from "./featuredMartketSubsection";
 import { featuredMarket } from "./featuredMarkets";
 import { threePerRowSection } from "./threePerRow";
 import { ctaSection } from "./ctaSection";
+import { heroSectionVideo } from "./heroSectionVideo";
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -18,6 +19,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     homePage,
     regions,
     heroSection,
+    heroSectionVideo,
     singleColumnSection,
     twoColumnSection,
     headingBodySection,

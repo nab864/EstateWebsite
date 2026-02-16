@@ -42,6 +42,18 @@ export interface HeadingBodyProps {
   body?: string;
 }
 
+export interface SingleColumnProps {
+  useLogo: boolean;
+  inverseColor: boolean;
+  mainHeading: string;
+  subHeading: string;
+  body: string;
+  missionStatementBeginning: string;
+  missionStatementOne: string;
+  missionStatementTwo: string;
+  missionStatementThree: string;
+}
+
 export interface TwoColumnProps {
   title: string;
   inverseColor: boolean;

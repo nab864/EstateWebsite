@@ -18,8 +18,13 @@ export const homePage = defineType({
       type: "array",
       of: [
         { type: "heroSection" },
+        { type: "heroSectionVideo" },
         { type: "singleColumnSection" },
         { type: "twoColumnSection" },
+        { type: "marketOverviewSection" },
+        { type: "featuredMarket" },
+        { type: "threePerRowSection"},
+        { type: "ctaSection"},
       ],
       options: {
         // This enables drag-and-drop reordering in the Studio
