@@ -10,6 +10,7 @@ import { FeaturedMarket } from "@/app/ui/sanityTemplates/featuredMarket";
 import { draftMode } from "next/headers";
 import { ThreePerRow } from "@/app/ui/sanityTemplates/threePerRow";
 import { CTASection } from "@/app/ui/sanityTemplates/ctaSection";
+import ImageStickySection from "@/app/ui/sanityTemplates/imageStickySection";
 
 // Optional: Generate metadata
 export async function generateMetadata({
@@ -64,6 +65,8 @@ export default async function RegionPage({
             return <ThreePerRow key={section._key} {...section} />;
           case "ctaSection":
             return <CTASection key={section._key} {...section} />;
+          case "imageStickySection":
+            return <ImageStickySection key={section._key} {...section} />;
           default:
             return null;
         }

@@ -78,6 +78,14 @@ export const regionBySlugQuery = groq`
         title,
         bodyList
       },
+      _type == "imageStickySection" => {
+        title,
+        mainHeading,
+        subHeading,
+        stickyImage,
+        stickyImageAlt,
+        list,
+      },
       _type == "ctaSection" => {
         mainSection,
         ctaText,

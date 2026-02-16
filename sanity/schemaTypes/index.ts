@@ -12,6 +12,7 @@ import { featuredMarket } from "./featuredMarkets";
 import { threePerRowSection } from "./threePerRow";
 import { ctaSection } from "./ctaSection";
 import { heroSectionVideo } from "./heroSectionVideo";
+import { imageStickySection } from "./imageStickySection";
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -29,5 +30,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     featuredMarketSubsection,
     threePerRowSection,
     ctaSection,
+    imageStickySection,
   ],
 };

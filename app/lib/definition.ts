@@ -40,6 +40,7 @@ export interface MarketOverviewProps {
 export interface HeadingBodyProps {
   heading?: string;
   body?: string;
+  list?: string[];
 }
 
 export interface SingleColumnProps {
@@ -89,4 +90,12 @@ export interface CTAProps {
   mainSection: HeadingBodyProps;
   ctaText: string;
   ctaLink: string;
+}
+
+export interface ImageStickyProps {
+  mainHeading: string;
+  subHeading: string;
+  stickyImage: any;
+  stickyImageAlt: string;
+  list: HeadingBodyProps[];
 }

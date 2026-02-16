@@ -1,8 +1,10 @@
 import { FeaturedMarketProps } from "@/app/lib/definition";
+import { urlFor } from "@/sanity/lib/image";
 import clsx from "clsx";
 import Image from "next/image";
 
 export function FeaturedMarket({ title, market }: FeaturedMarketProps) {
+  
   return (
     <section className="mx-auto px-6 py-10 space-y-24 max-w-7xl">
       <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-16">
@@ -41,7 +43,7 @@ export function FeaturedMarket({ title, market }: FeaturedMarketProps) {
                   </div>
                   <div className="h-64 md:h-80 w-full relative rounded-xl overflow-hidden ">
                     <Image
-                      src="/landscaping.jpg"
+                      src={urlFor(section.backgroundImage).width(1920).height(1080).url()}
                       alt="Cherry Hills Village"
                       fill
                       className="object-cover"
