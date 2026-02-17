@@ -1,6 +1,7 @@
 import { PersonCardDef } from "@/app/lib/definition";
 import Image from "next/image";
 import Link from "next/link";
+import { urlFor } from "@/sanity/lib/image";
 
 export default function PersonCard({
   name,
@@ -13,20 +14,20 @@ export default function PersonCard({
   specialties,
   about,
   established,
-  image,
+  personImage,
   handleRegionSearch,
   handleCategorySearch,
 }: PersonCardDef) {
   return (
     <div className="flex flex-col w-96 h-[550px] items-center text-primary bg-background rounded-lg border m-2">
-      <div className="w-full h-40 flex items-center justify-center">
+      <div className="w-full h-40 flex items-center justify-center m-2">
         <Link
           href={url}
           target="_blank"
           className="bg-background-secondary rounded"
         >
           <Image
-            src={image}
+            src={urlFor(personImage).width(160).height(160).url()}
             alt={name}
             width={160}
             height={160}

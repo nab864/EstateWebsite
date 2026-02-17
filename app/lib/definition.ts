@@ -9,7 +9,7 @@ export type PersonCardDef = {
   specialties: string[];
   about: string;
   established: number;
-  image: string;
+  personImage: string;
   handleRegionSearch?: (region: string) => void;
   handleCategorySearch?: (category: string) => void;
 };

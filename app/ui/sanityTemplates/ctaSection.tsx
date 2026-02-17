@@ -11,7 +11,7 @@ export function CTASection({ mainSection, ctaText, ctaLink }: CTAProps) {
         <p className="text-lg md:text-xl leading-relaxed">{mainSection.body}</p>
         <Link
           href={ctaLink}
-          className="inline-block border border-white text-white px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="inline-block border border-white text-white px-8 py-3 rounded hover:bg-white hover:text-primary transition-colors duration-300 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           {ctaText}
         </Link>

@@ -14,6 +14,9 @@ import { ctaSection } from "./ctaSection";
 import { heroVideoSection } from "./heroVideoSection";
 import { imageStickySection } from "./imageStickySection";
 import { ctaSectionImage } from "./ctaSectionImage";
+import { personCard } from "./directoryPersonCard";
+import { directory } from "./directoryPage";
+
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -33,5 +36,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ctaSection,
     ctaSectionImage,
     imageStickySection,
+    directory,
+    personCard,
   ],
 };

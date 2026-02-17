@@ -8,13 +8,16 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 export default function Directory({
   state,
   service,
+  directory
 }: {
   state: string;
   service: string;
+  directory: any;
 }) {
-  const [personList, setPersonList] = useState<PersonCardDef[]>(personJSON);
+  const [personList, setPersonList] = useState<PersonCardDef[]>(directory.people);
+  console.log(personList)
   const [filterPersonList, setFilterPersonList] =
-    useState<PersonCardDef[]>(personJSON);
+    useState<PersonCardDef[]>(directory.people);
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -125,7 +128,7 @@ export default function Directory({
                 specialties={person.specialties}
                 about={person.about}
                 established={person.established}
-                image={person.image}
+                personImage={person.personImage}
                 handleRegionSearch={handleRegionSearch}
                 handleCategorySearch={handleCategorySearch}
               />

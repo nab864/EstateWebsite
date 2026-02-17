@@ -34,13 +34,26 @@ export default defineConfig({
           // Home Page
           homePage: defineLocations({
             select: {
-              title: "Home",
+              title: "title",
             },
             resolve: (doc) => ({
               locations: [
                 {
-                  title: doc?.title || "Home",
+                  title: "Home",
                   href: "/",
+                },
+              ],
+            }),
+          }),
+          directory: defineLocations({
+            select: {
+              title: "title",
+            },
+            resolve: (doc) => ({
+              locations: [
+                {
+                  title: "Directory",
+                  href: "/directory",
                 },
               ],
             }),

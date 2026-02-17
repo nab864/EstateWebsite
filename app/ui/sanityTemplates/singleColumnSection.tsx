@@ -33,7 +33,7 @@ export function SingleColumnSection({
               "text-4xl font-serif text-center tracking-wide text-primary",
             )}
           >
-            {mainHeading.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()}
+            {mainHeading}
           </h2>
         ) : null}
 
@@ -43,7 +43,7 @@ export function SingleColumnSection({
               "text-sm uppercase tracking-[0.3em] transition-all duration-2000 text-primary",
             )}
           >
-            {subHeading.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()}
+            {subHeading}
           </h3>
         ) : null}
 

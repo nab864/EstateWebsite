@@ -21,6 +21,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const region = await client.fetch(regionBySlugQuery, { slug });
+   console.log(region)
 
   if (!region) return {};
 

@@ -196,3 +196,10 @@ export const homepageQuery = groq`
     }
   }
 `;
+export const directoryQuery = groq`
+  *[_type == "directory"][0] {
+    title,
+    heading,
+    people,
+  }
+`;
