@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import PersonCard from "./person-card";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { stegaClean } from "next-sanity";
+import { findAllServices, findAllStates } from "@/app/lib/utils";
 
 export default function Directory({
   state,
@@ -15,12 +16,13 @@ export default function Directory({
   directory: any;
 }) {
   const [personList, setPersonList] = useState<PersonCardDef[]>(directory.data.people);
+  const [serviceList, setServiceList] = useState<string[]>(findAllServices(stegaClean(directory.data.people)));
+  const [stateList, setStateList] = useState<string[]>(findAllStates(stegaClean(directory.data.people)));
   const [filterPersonList, setFilterPersonList] =
     useState<PersonCardDef[]>(stegaClean(directory.data.people));
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-
   useEffect(() => {
     let filteredList = personList;
     if (state) {
@@ -63,10 +65,11 @@ export default function Directory({
           value={state}
         >
           <option value="">Select Region</option>
-          <option value="California">California</option>
-          <option value="Colorado">Colorado</option>
-          <option value="Florida">Florida</option>
-          <option value="Texas">Texas</option>
+          {stateList.map((state, index) => {
+            return (
+              <option key={index} value={state}>{state}</option>
+            )
+          })}
         </select>
 
         <select
@@ -77,39 +80,12 @@ export default function Directory({
           value={service}
         >
           <option value="">Select Service</option>
-          <option value="Estate Oversight & Property Maintenance">
-            Estate Oversight & Property Maintenance
-          </option>
-          <option value="Home Watch & Absentee Owner Care">
-            Home Watch & Absentee Owner Care
-          </option>
-          <option value="Vendor & Contractor Management">
-            Vendor & Contractor Management
-          </option>
-          <option value="Household Staff & Operations Support">
-            Household Staff & Operations Support
-          </option>
-          <option value="Lifestyle & Personal Concierge">
-            Lifestyle & Personal Concierge
-          </option>
-          <option value="Project Management & Renovations">
-            Project Management & Renovations
-          </option>
-          <option value="Emergency Planning & Response">
-            Emergency Planning & Response
-          </option>
-          <option value="Administrative & Owner Reporting">
-            Administrative & Owner Reporting
-          </option>
-          <option value="Estate Strategy & Consulting">
-            Estate Strategy & Consulting
-          </option>
-          <option value="Smart Home & Systems Integration">
-            Smart Home & Systems Integration
-          </option>
-          <option value="Guest Hospitality & Hosting Assistance">
-            Guest Hospitality & Hosting Assistance
-          </option>
+          {serviceList.map((service, index) => {
+            return (
+              <option key={index} value={service}>{service}</option>
+            )
+          })}
+          
         </select>
       </div>
       <div className="flex flex-wrap justify-center mt-2 gap">
