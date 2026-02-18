@@ -1,25 +1,13 @@
-import { draftMode } from "next/headers";
-import { client } from "@/sanity/lib/client";
 import { homepageQuery } from "@/sanity/lib/queries";
-
 import HomePage from "../ui/home/home-page";
-import { stegaClean } from "next-sanity";
+import { sanityFetch } from "@/sanity/lib/live";
+import { draftMode } from "next/headers";
 
 export default async function Page() {
-  const { isEnabled } = await draftMode();
-  const home = await client.fetch(
-    homepageQuery,
-    { },
-    isEnabled
-      ? { perspective: "drafts", useCdn: false, stega: true }
-      : undefined,
-  );
-  const cleanHome = stegaClean(home)
-  console.log(cleanHome)
-  console.log(home)
+  const home = await sanityFetch({ query: homepageQuery})
   return (
     <div>
-      <HomePage home={cleanHome} />
+      <HomePage home={home} />
     </div>
   );
 }

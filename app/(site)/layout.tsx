@@ -2,13 +2,13 @@ import { VisualEditing } from "next-sanity/visual-editing";
 import TopBar from "../ui/top-bar/top-bar";
 import { draftMode } from "next/headers";
 import { DisableDraftMode } from "../ui/disable-draft-mode";
+import { SanityLive } from "@/sanity/lib/live";
 
 export default async function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html lang="en">
       <head>
@@ -22,6 +22,7 @@ export default async function Layout({
       <body>
         <TopBar />
         {children}
+        <SanityLive />
         {(await draftMode()).isEnabled && (
           <>
             <VisualEditing />

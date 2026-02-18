@@ -1,4 +1,3 @@
-import { client } from "@/sanity/lib/client";
 import { regionBySlugQuery } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 
@@ -7,11 +6,12 @@ import { SingleColumnSection } from "@/app/ui/sanityTemplates/singleColumnSectio
 import { TwoColumnSection } from "@/app/ui/sanityTemplates/twoColumnSection";
 import MarketOverviewSection from "@/app/ui/sanityTemplates/marketOverviewSection";
 import { FeaturedMarket } from "@/app/ui/sanityTemplates/featuredMarket";
-import { draftMode } from "next/headers";
 import { ThreePerRow } from "@/app/ui/sanityTemplates/threePerRow";
 import { CTASection } from "@/app/ui/sanityTemplates/ctaSection";
 import ImageStickySection from "@/app/ui/sanityTemplates/imageStickySection";
 import { CTAImageSection } from "@/app/ui/sanityTemplates/ctaImageSection";
+import { sanityFetch } from "@/sanity/lib/live";
+import { stegaClean } from "next-sanity";
 
 // Optional: Generate metadata
 export async function generateMetadata({
@@ -19,31 +19,26 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const region = await client.fetch(regionBySlugQuery, { slug });
-   console.log(region)
+  const region = await sanityFetch({
+    query: regionBySlugQuery,
+    params: params,
+  });
 
   if (!region) return {};
 
   return {
-    title: region.title,
+    title: region.data.title,
   };
 }
-
 export default async function RegionPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const { isEnabled } = await draftMode();
-  const region = await client.fetch(
-    regionBySlugQuery,
-    { slug },
-    isEnabled
-      ? { perspective: "drafts", useCdn: false, stega: true }
-      : undefined,
-  );
+  const region = await sanityFetch({
+    query: regionBySlugQuery,
+    params: params,
+  });
 
   if (!region) {
     notFound();
@@ -51,7 +46,7 @@ export default async function RegionPage({
 
   return (
     <div>
-      {region.sections?.map((section: any) => {
+      {region.data.sections?.map((section: any) => {
         switch (section._type) {
           case "heroSection":
             return <HeroSection key={section._key} {...section} />;

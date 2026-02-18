@@ -7,7 +7,6 @@ import { useIsPresentationTool } from "next-sanity/hooks";
 export function DisableDraftMode() {
   const [pending, startTransition] = useTransition();
   const isPresentationTool = useIsPresentationTool();
-  console.log(isPresentationTool)
 
   const disable = () => startTransition(() => disableDraftMode());
 

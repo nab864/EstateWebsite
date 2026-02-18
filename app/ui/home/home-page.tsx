@@ -64,7 +64,7 @@ export default function HomePage({ home }: { home: any }) {
         </div>
       ) : null}
 
-      {home.sections?.map((section: any) => {
+      {home.data.sections?.map((section: any) => {
         switch (section._type) {
           case "heroSection":
             return <HeroSection key={section._key} {...section} />;

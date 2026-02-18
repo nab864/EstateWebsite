@@ -28,11 +28,7 @@ export function SingleColumnSection({
         )}
 
         {mainHeading ? (
-          <h2
-            className={clsx(
-              "text-4xl font-serif text-center tracking-wide text-primary",
-            )}
-          >
+          <h2 className={clsx("text-4xl font-serif text-center text-primary tracking-wide")}>
             {mainHeading}
           </h2>
         ) : null}

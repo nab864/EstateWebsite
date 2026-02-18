@@ -1,9 +1,9 @@
 "use client";
 import { PersonCardDef } from "@/app/lib/definition";
 import { useEffect, useState } from "react";
-import personJSON from "@/public/dummy-data.json";
 import PersonCard from "./person-card";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { stegaClean } from "next-sanity";
 
 export default function Directory({
   state,
@@ -14,10 +14,9 @@ export default function Directory({
   service: string;
   directory: any;
 }) {
-  const [personList, setPersonList] = useState<PersonCardDef[]>(directory.people);
-  console.log(personList)
+  const [personList, setPersonList] = useState<PersonCardDef[]>(directory.data.people);
   const [filterPersonList, setFilterPersonList] =
-    useState<PersonCardDef[]>(directory.people);
+    useState<PersonCardDef[]>(stegaClean(directory.data.people));
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -25,11 +24,11 @@ export default function Directory({
   useEffect(() => {
     let filteredList = personList;
     if (state) {
-      filteredList = personList.filter((entry) => entry.state === state);
+      filteredList = personList.filter((entry) => stegaClean(entry.state) === state);
     }
     if (service) {
       filteredList = filteredList.filter((entry) =>
-        entry.services.includes(service),
+        stegaClean(entry.services).includes(service),
       );
     }
     setFilterPersonList(filteredList);
