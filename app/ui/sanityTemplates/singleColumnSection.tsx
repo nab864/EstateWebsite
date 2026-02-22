@@ -8,64 +8,56 @@ export function SingleColumnSection({
   useLogo,
   inverseColor,
   mainHeading,
-  subHeading,
-  body,
-  missionStatementBeginning,
-  missionStatementOne,
-  missionStatementTwo,
-  missionStatementThree,
+  sections,
 }: SingleColumnProps) {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <section className="w-screen flex flex-col items-center mt-5 mb-20">
-      <div className="max-w-2xl flex flex-col items-center text-center gap-6">
+    <section className="my-10">
+      <div className="mx-auto max-w-3xl text-center">
         {useLogo && (
-          <div className={clsx("transition-all duration-2000")}>
-            <div className="h-[40vh]">
+          <div className="">
+            <div className="h-[40vh] flex items-center justify-center">
               <CompanyLogo />
             </div>
           </div>
         )}
 
-        {mainHeading ? (
-          <h2 className={clsx("text-4xl font-serif text-center text-primary tracking-wide")}>
+        {mainHeading && (
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight text-primary mb-10">
             {mainHeading}
           </h2>
-        ) : null}
-
-        {subHeading ? (
-          <h3
-            className={clsx(
-              "text-sm uppercase tracking-[0.3em] transition-all duration-2000 text-primary",
-            )}
-          >
-            {subHeading}
-          </h3>
-        ) : null}
-
-        <p
-          className={clsx(
-            "text-base leading-relaxed text-muted-foreground transition-all duration-2000 text-primary",
-          )}
-        >
-          {body && body}
-        </p>
-      </div>
-      <h3
-        className={clsx(
-          "text-3xl text-primary text-center mt-15 transition-all duration-2000",
         )}
-      >
-        {missionStatementBeginning && missionStatementBeginning}
-      </h3>
-      <div
-        className={clsx(
-          "flex flex-col sm:flex-row justify-between items-between text-3xl space-y-5 text-primary mt-10 text-center w-3/4 italic font-bold",
-        )}
-      >
-        <h4>{missionStatementOne && missionStatementOne}</h4>
-        <h4>{missionStatementTwo && missionStatementTwo}</h4>
-        <h4>{missionStatementThree && missionStatementThree}</h4>
+
+        <div className="space-y-10">
+          {sections.map((section, index) => {
+            switch (section._type) {
+              case "richTextBlock":
+                return (
+                  <p
+                    key={index}
+                    className="text-lg leading-relaxed text-neutral-700"
+                  >
+                    {section.body}
+                  </p>
+                );
+
+              case "headingBodySection":
+                return (
+                  <div key={index} className="space-y-4">
+                    <h3 className="font-serif text-2xl md:text-3xl text-neutral-900">
+                      {section.heading}
+                    </h3>
+                    <p className="text-lg leading-relaxed text-neutral-700">
+                      {section.body}
+                    </p>
+                  </div>
+                );
+
+              default:
+                return null;
+            }
+          })}
+        </div>
       </div>
     </section>
   );

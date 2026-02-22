@@ -16,6 +16,7 @@ import { imageStickySection } from "./imageStickySection";
 import { ctaSectionImage } from "./ctaSectionImage";
 import { personCard } from "./directoryPersonCard";
 import { directory } from "./directoryPage";
+import { richTextBlock } from "./textBox";
 
 
 
@@ -38,5 +39,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     imageStickySection,
     directory,
     personCard,
+    richTextBlock,
   ],
 };

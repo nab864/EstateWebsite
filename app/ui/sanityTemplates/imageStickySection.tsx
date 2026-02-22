@@ -52,10 +52,10 @@ export default function ImageStickySection({
           ) : null}
         </div>
         <div className="w-1/2">
-          <div className="text-primary mx-6">
+          <div className="text-primary mx-6 flex flex-col items-center">
             {list.map((block, index) => {
               return (
-                <div key={index}>
+                <div key={index} className="mb-30 last:mb-10 max-w-3xl">
                   <ServiceDescription
                     title={block.heading as string}
                     body={block.body as string}

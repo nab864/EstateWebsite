@@ -23,13 +23,16 @@ export const regionBySlugQuery = groq`
         ctaLink
       },
       _type == "heroVideoSection" => {
+        company,
         heading,
         subheading,
         description,
         backgroundVideo,
         backgroundVideoAltText,
         ctaText,
-        ctaLink
+        ctaLink,
+        ctaText2,
+        ctaLink2,
       },
       
       _type == "singleColumnSection" => {
@@ -118,13 +121,16 @@ export const homepageQuery = groq`
         ctaLink
       },
       _type == "heroVideoSection" => {
+        company,
         heading,
         subheading,
         description,
         backgroundVideo,
         backgroundVideoAltText,
         ctaText,
-        ctaLink
+        ctaLink,
+        ctaText2,
+        ctaLink2,
       },
       
       _type == "singleColumnSection" => {
@@ -132,11 +138,7 @@ export const homepageQuery = groq`
         useLogo,
         mainHeading,
         subHeading,
-        body,
-        missionStatementBeginning,
-        missionStatementOne,
-        missionStatementTwo,
-        missionStatementThree,
+        sections,
       },
       _type == "twoColumnSection" => {
         title,

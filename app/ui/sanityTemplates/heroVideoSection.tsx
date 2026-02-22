@@ -6,6 +6,7 @@ import { HeroVideoSectionProps } from "@/app/lib/definition";
 import clsx from "clsx";
 
 export function HeroVideoSection({
+  company,
   heading,
   subheading,
   backgroundVideo,
@@ -13,6 +14,8 @@ export function HeroVideoSection({
   description,
   ctaText,
   ctaLink,
+  ctaText2,
+  ctaLink2,
   isFirstVisit,
 }: HeroVideoSectionProps) {
   const [opacity, setOpacity] = useState(1);
@@ -54,7 +57,7 @@ export function HeroVideoSection({
 
       <div
         className={clsx(
-          "absolute inset-0 flex items-center justify-center sm:items-end sm:justify-start sm:mb-30 sm:ml-30 animate-slide-right opacity-0",
+          "absolute inset-0 flex items-center justify-center sm:items-end sm:justify-start sm:mb-20 sm:ml-20 animate-slide-right opacity-0",
           {
             "animate-slide-right opacity-0": isFirstVisit,
             "opacity-100": !isFirstVisit,
@@ -62,10 +65,18 @@ export function HeroVideoSection({
         )}
         style={{ animationDelay: isFirstVisit ? "5s" : "0s" }}
       >
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center max-w-5xl">
+          {company ? (
+            <p
+              className="text-6xl md:text-7xl text-[#f6f3ee] mb-8 font-bold font-serif transition-all duration-100"
+              style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
+            >
+              {company}
+            </p>
+          ) : null}
           {heading ? (
             <h1
-              className="text-4xl sm:text-7xl text-[#f6f3ee] mb-4 font-bold font-serif transition-all duration-100 text-center"
+              className="text-2xl md:text-3xl text-center text-[#f6f3ee] mb-8 transition-all duration-100"
               style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
             >
               {heading}
@@ -73,22 +84,40 @@ export function HeroVideoSection({
           ) : null}
           {subheading ? (
             <h2
-              className="text-3xl text-[#f6f3ee] text-center transition-all duration-100 mb-10"
+              className="text-2xl md:text-2xl text-center italic text-[#f6f3ee] mb-8 transition-all duration-100"
               style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
             >
               {subheading}
             </h2>
           ) : null}
+          {description ? (
+            <h2
+              className="text-[#f6f3ee] mb-10 bg-background-secondary/80 p-6 rounded-xl max-w-3xl text-sm md:text-base leading-relaxed"
+              style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
+            >
+              {description}
+            </h2>
+          ) : null}
           <div
-            className="transition-all duration-100"
+            className="transition-all duration-100 flex"
             style={{ opacity, filter: `blur(${(1 - opacity) * 4}px)` }}
           >
+            {ctaLink && ctaText ? 
             <Link
-              href={ctaLink as string}
-              className="border text-[#f6f3ee] hover:bg-[#f6f3ee] hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer focus-visible:bg-[#f6f3ee] focus-visible:text-primary focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
+              href={ctaLink}
+              className="border text-[#f6f3ee] hover:bg-[#f6f3ee] mx-1 hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer focus-visible:bg-[#f6f3ee] focus-visible:text-primary focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {ctaText}
-            </Link>
+            </Link> : null
+            }
+            {ctaLink2 && ctaText2 ? 
+            <Link
+              href={ctaLink2}
+              className="border text-[#f6f3ee] hover:bg-[#f6f3ee] mx-1 hover:text-primary transition-color duration-300 p-1 mt-3 rounded cursor-pointer focus-visible:bg-[#f6f3ee] focus-visible:text-primary focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              {ctaText2}
+            </Link> : null
+            }
           </div>
         </div>
       </div>

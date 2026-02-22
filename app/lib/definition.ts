@@ -28,6 +28,7 @@ export interface HeroSectionProps {
   ctaLink?: string;
 }
 export interface HeroVideoSectionProps {
+  company?: string;
   heading?: string;
   subheading?: string;
   backgroundVideo?: string;
@@ -35,6 +36,8 @@ export interface HeroVideoSectionProps {
   description?: string;
   ctaText?: string;
   ctaLink?: string;
+  ctaText2?: string;
+  ctaLink2?: string;
   isFirstVisit?: boolean;
 }
 export interface MarketOverviewProps {
@@ -57,12 +60,7 @@ export interface SingleColumnProps {
   useLogo: boolean;
   inverseColor: boolean;
   mainHeading: string;
-  subHeading: string;
-  body: string;
-  missionStatementBeginning: string;
-  missionStatementOne: string;
-  missionStatementTwo: string;
-  missionStatementThree: string;
+  sections: any[]
 }
 
 export interface TwoColumnProps {

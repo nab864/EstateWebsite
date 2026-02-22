@@ -11,13 +11,18 @@ export const heroVideoSection = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'heading',
-      title: 'Heading',
+      name: 'company',
+      title: 'Company',
       type: 'string',
     }),
     defineField({
+      name: 'heading',
+      title: 'Heading (h1)',
+      type: 'text',
+    }),
+    defineField({
       name: 'subheading',
-      title: 'Subheading',
+      title: 'Subheading (h2)',
       type: 'text',
     }),
     defineField({
@@ -46,6 +51,18 @@ export const heroVideoSection = defineType({
     }),
     defineField({
       name: 'ctaLink',
+      title: 'Call to Action Link',
+      type: 'string',
+      description: 'URL for the button (e.g., /directory?state=Colorado)',
+    }),
+    defineField({
+      name: 'ctaText2',
+      title: 'Call to Action Text',
+      type: 'string',
+      description: 'Button text (e.g., "Find Your Estate Manager")',
+    }),
+    defineField({
+      name: 'ctaLink2',
       title: 'Call to Action Link',
       type: 'string',
       description: 'URL for the button (e.g., /directory?state=Colorado)',

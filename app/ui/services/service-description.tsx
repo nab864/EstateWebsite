@@ -13,22 +13,30 @@ export default function ServiceDescription({
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <div
-    ref={ref}
+      ref={ref}
       className={clsx(
-        "transition-all duration-2000 bg-background/10 mb-10 p-3 rounded-2xl",
+        "transition-all duration-2000 bg-background/10 p-20 rounded-2xl",
         { "opacity-100 translate-y-0": isVisible },
         { "": !isVisible },
       )}
     >
-      <h4 className="text-3xl underline mb-4 font-serif text-secondary">{title}</h4>
-      <p className="text-xl leading-relaxed mb-6 text-secondary">{body}</p>
+      {title ? (
+        <h4 className="text-3xl underline mb-4 font-serif text-secondary">
+          {title}
+        </h4>
+      ) : null}
+      {body ? (
+        <p className="text-xl leading-relaxed mb-6 text-secondary">{body}</p>
+      ) : null}
 
-      <div className="pl-5 text-lg text-secondary">
+      <div className="text-lg text-secondary">
+        {estateServices ? 
         <ul className="list-disc">
           {estateServices.map((service, i) => {
             return <li key={i}>{service}</li>;
           })}
-        </ul>
+        </ul> : null
+        }
       </div>
     </div>
   );
