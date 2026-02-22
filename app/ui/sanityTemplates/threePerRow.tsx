@@ -2,7 +2,7 @@ import { ThreePerRownProps } from "@/app/lib/definition";
 
 export function ThreePerRow({ title, bodyList }: ThreePerRownProps) {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-10">
       <div className="max-w-6xl mx-auto px-6 space-y-16">
         <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-12">
           {title}

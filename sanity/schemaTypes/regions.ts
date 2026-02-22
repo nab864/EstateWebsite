@@ -37,6 +37,7 @@ export const regions = defineType({
         { type: "ctaSection"},
         { type: "ctaSectionImage"},
         { type: "imageStickySection"},
+        { type: "marketsWeServe"},
       ],
       options: {
         sortable: true,

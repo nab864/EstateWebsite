@@ -13,6 +13,7 @@ import { CTAImageSection } from "../sanityTemplates/ctaImageSection";
 import CompanyLogo from "../company-logo";
 import Footer from "../footer/footer";
 import { HeroVideoSection } from "../sanityTemplates/heroVideoSection";
+import { MarketsWeServe } from "../sanityTemplates/marketsWeServe";
 
 export default function HomePage({ home }: { home: any }) {
   const [show, setShow] = useState(false);
@@ -92,6 +93,8 @@ export default function HomePage({ home }: { home: any }) {
             return <ImageStickySection key={section._key} {...section} />;
           case "ctaSectionImage":
             return <CTAImageSection key={section._key} {...section} />;
+          case "marketsWeServe":
+            return <MarketsWeServe key={section._key} {...section} />;
           default:
             return null;
         }

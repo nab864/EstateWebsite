@@ -49,6 +49,18 @@ export interface MarketOverviewProps {
   columnThree?: HeadingBodyProps;
   footerText?: string;
 }
+export interface MarketsWeServeProps {
+  heading?: string;
+  bodyList: ImageFlipProps[];
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+export interface ImageFlipProps {
+  list: string[];
+  frontText: string;
+  image?: any;
+}
 
 export interface HeadingBodyProps {
   heading?: string;
@@ -101,6 +113,7 @@ export interface CTAProps {
 }
 export interface CTAImageProps {
   mainSection: string;
+  inverseColor: boolean;
   ctaText: string;
   ctaLink: string;
   ctaImage: any;

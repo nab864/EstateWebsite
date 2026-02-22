@@ -27,6 +27,8 @@ export const homePage = defineType({
         { type: "ctaSection" },
         { type: "ctaSectionImage" },
         { type: "imageStickySection" },
+        { type: "marketsWeServe"},
+
       ],
       options: {
         // This enables drag-and-drop reordering in the Studio

@@ -12,7 +12,7 @@ export const twoColumnSection = defineType({
     }),
     defineField({
       name: 'inverseColor',
-      title: 'InverseColor',
+      title: 'Inverse Color',
       initialValue: false,
       type: 'boolean',
     }),

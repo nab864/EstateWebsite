@@ -55,6 +55,12 @@ export const regionBySlugQuery = groq`
         rightColumnTitle,
         rightColumn,
       },
+      _type == "marketsWeServe" => {
+        heading,
+        bodyList,
+        ctaText,
+        ctaLink
+      },
       _type == "marketOverviewSection" => {
         heading,
         subheading,
@@ -96,6 +102,7 @@ export const regionBySlugQuery = groq`
       },
       _type == "ctaSectionImage" => {
         mainSection,
+        inverseColor,
         ctaText,
         ctaLink,
         ctaImage,
@@ -149,6 +156,12 @@ export const homepageQuery = groq`
         rightColumnTitle,
         rightColumn,
       },
+      _type == "marketsWeServe" => {
+        heading,
+        bodyList,
+        ctaText,
+        ctaLink
+      },
       _type == "marketOverviewSection" => {
         heading,
         subheading,
@@ -190,6 +203,7 @@ export const homepageQuery = groq`
       },
       _type == "ctaSectionImage" => {
         mainSection,
+        inverseColor,
         ctaText,
         ctaLink,
         ctaImage,

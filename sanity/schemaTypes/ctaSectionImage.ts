@@ -13,6 +13,12 @@ export const ctaSectionImage = defineType({
       description: "Value is for Studio Purposes Only"
     }),
     defineField({
+      name: "inverseColor",
+      title: "Inverse Color",
+      initialValue: false,
+      type: "boolean",
+    }),
+    defineField({
       name: "mainSection",
       title: "Main Section",
       type: "string",

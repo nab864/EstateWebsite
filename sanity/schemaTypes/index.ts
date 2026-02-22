@@ -17,6 +17,8 @@ import { ctaSectionImage } from "./ctaSectionImage";
 import { personCard } from "./directoryPersonCard";
 import { directory } from "./directoryPage";
 import { richTextBlock } from "./textBox";
+import { marketsWeServe } from "./marketsWeServe";
+import { imageFlip } from "./imageFlip";
 
 
 
@@ -40,5 +42,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     directory,
     personCard,
     richTextBlock,
+    marketsWeServe,
+    imageFlip,
   ],
 };

@@ -7,17 +7,24 @@ import clsx from "clsx";
 
 export function CTAImageSection({
   mainSection,
+  inverseColor,
   ctaText,
   ctaLink,
   ctaImage,
   ctaImageAlt,
 }: CTAImageProps) {
   return (
-    <section className="w-screen flex flex-col items-center mt-5">
+    <section className={clsx("w-screen flex flex-col items-center py-10", {
+      "bg-background-secondary": inverseColor
+    })}>
       {mainSection ? 
       <h2
         className={clsx(
-          "text-4xl w-full text-primary text-center font-serif transition-all duration-2000 mb-5",
+          "text-4xl w-full text-center font-serif transition-all duration-2000 mb-5",
+          {
+            "text-primary": !inverseColor,
+            "text-secondary": inverseColor
+          }
         )}
       >
         {mainSection}
