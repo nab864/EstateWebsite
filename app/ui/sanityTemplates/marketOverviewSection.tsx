@@ -12,19 +12,21 @@ export default function MarketOverviewSection({
 }: MarketOverviewProps) {
   return (
     <section className="mx-auto px-6 py-10">
-      {heading ? (
-        <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-4">
-          {heading}
-        </h2>
-      ) : null}
+      <div className="mb-10">
+        {heading ? (
+          <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-4">
+            {heading}
+          </h2>
+        ) : null}
 
-      {subheading ? (
-        <h3 className="text-2xl md:text-3xl text-center text-gray-700 mb-10">
-          {subheading}
-        </h3>
-      ) : null}
+        {subheading ? (
+          <h3 className="text-2xl md:text-3xl text-center text-primary/80">
+            {subheading}
+          </h3>
+        ) : null}
+      </div>
 
-      <div className="text-lg md:text-xl text-gray-700 space-y-6 leading-relaxed mx-auto flex flex-col items-center">
+      <div className="text-lg md:text-xl text-primary/80 space-y-6 leading-relaxed mx-auto flex flex-col items-center">
         {bodyText ? <p className="max-w-4xl">{bodyText}</p> : null}
 
         <div
@@ -34,7 +36,8 @@ export default function MarketOverviewSection({
               !columnThree?.body &&
               columnTwo?.heading &&
               columnTwo?.body,
-            "md:grid-cols-3 max-w-none": columnThree?.heading && columnThree?.body,
+            "md:grid-cols-3 max-w-none":
+              columnThree?.heading && columnThree?.body,
           })}
         >
           {columnOne?.heading && columnOne?.body ? (

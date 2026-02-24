@@ -19,7 +19,7 @@ export function TwoColumnSection({
     >
       {title ? (
         <h2
-          className={clsx("text-4xl md:text-5xl font-serif text-center mb-5", {
+          className={clsx("text-4xl md:text-5xl font-serif text-center mb-10", {
             "text-secondary": inverseColor,
           })}
         >
@@ -39,7 +39,7 @@ export function TwoColumnSection({
           })}
         >
           {leftColumnTitle ? (
-            <h3 className="text-2xl font-semibold mb-4">{leftColumnTitle}</h3>
+            <h3 className="text-3xl font-semibold mb-4">{leftColumnTitle}</h3>
           ) : null}
 
           <div className="space-y-6">
@@ -71,7 +71,7 @@ export function TwoColumnSection({
           })}
         >
           {rightColumnTitle ? (
-            <h3 className="text-2xl font-semibold mb-4">{rightColumnTitle}</h3>
+            <h3 className="text-3xl font-semibold mb-4">{rightColumnTitle}</h3>
           ) : null}
 
           <div className="space-y-6">

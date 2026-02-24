@@ -1,7 +1,7 @@
 import { defineType, defineField } from "sanity";
 
-export const threePerRowSection = defineType({
-  name: "threePerRowSection",
+export const threePerRowSubSection = defineType({
+  name: "threePerRowSubSection",
   title: "Three Per Row",
   type: "object",
   fields: [
@@ -12,14 +12,14 @@ export const threePerRowSection = defineType({
     }),
     defineField({
       name: "heading",
-      title: "Heading",
+      title: "Section Heading",
       type: "string",
     }),
     defineField({
-      name: "subSections",
-      title: "Subsections",
+      name: "bodyList",
+      title: "Body List",
       type: "array",
-      of: [{ type: "threePerRowSubSection"}]
+      of: [{ type: "headingBodySection" }],
     }),
   ],
 });

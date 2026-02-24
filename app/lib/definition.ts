@@ -101,8 +101,12 @@ export interface FeaturedMarketSubsection {
   backgroundImage: any;
 }
 
-export interface ThreePerRownProps {
-  title: string;
+export interface ThreePerRowProps {
+  heading: string;
+  subSections: ThreePerRowSubsectionProps[];
+}
+export interface ThreePerRowSubsectionProps {
+  heading: string;
   bodyList: HeadingBodyProps[];
 }
 

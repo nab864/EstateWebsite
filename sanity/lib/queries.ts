@@ -84,8 +84,8 @@ export const regionBySlugQuery = groq`
         market
       },
       _type == "threePerRowSection" => {
-        title,
-        bodyList
+        heading,
+        subSections
       },
       _type == "imageStickySection" => {
         title,
@@ -185,8 +185,8 @@ export const homepageQuery = groq`
         market
       },
       _type == "threePerRowSection" => {
-        title,
-        bodyList
+        heading,
+        subSections
       },
       _type == "imageStickySection" => {
         title,

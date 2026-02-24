@@ -19,6 +19,7 @@ import { directory } from "./directoryPage";
 import { richTextBlock } from "./textBox";
 import { marketsWeServe } from "./marketsWeServe";
 import { imageFlip } from "./imageFlip";
+import { threePerRowSubSection } from "./threePerRowSubsection";
 
 
 
@@ -36,6 +37,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     featuredMarketAreaSection,
     featuredMarketSubsection,
     threePerRowSection,
+    threePerRowSubSection,
     ctaSection,
     ctaSectionImage,
     imageStickySection,
