@@ -13,9 +13,18 @@ export function SingleColumnSection({
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <section className="my-10">
-      <div className="mx-auto max-w-3xl text-center">
+      <div
+        className={clsx(
+          "mx-auto max-w-3xl text-center transition-all duration-1500",
+          {
+            "translate-y-52 opacity-0": !isVisible,
+            "translate-y-0 opacity-100": isVisible,
+          },
+        )}
+        ref={ref}
+      >
         {useLogo && (
-          <div className="">
+          <div>
             <div className="h-[40vh] flex items-center justify-center">
               <CompanyLogo />
             </div>

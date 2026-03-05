@@ -18,9 +18,9 @@ export default async function TopBar() {
         >
           <CompanyLogo />
           <h1 className="font-serif text-[1.1rem]">
-            <span className="block text-primary">PRIVATE ESTATE</span>
+            <span className="block text-primary">REGENT PROPERTY</span>
             <span className="block leading-1.5 pb-2 text-[#396a83]">
-              NETWORK
+              GROUP
             </span>
           </h1>
         </Link>

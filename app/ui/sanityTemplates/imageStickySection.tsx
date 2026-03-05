@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ImageStickyProps } from "@/app/lib/definition";
 import { urlFor } from "@/sanity/lib/image";
 import clsx from "clsx";
@@ -13,12 +13,17 @@ export default function ImageStickySection({
   stickyImageAlt,
   list,
 }: ImageStickyProps) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <div className="w-screen flex flex-col items-center bg-background-secondary relative">
-      <div className="z-30 sticky top-[12vh] bg-background-secondary w-full p-2">
+    <section className="w-screen flex flex-col items-center bg-background-secondary relative">
+      <div ref={ref}>
         <div
           className={clsx(
-            "transition-all duration-2000 ",
+            "z-30 sticky top-[12vh] bg-background-secondary w-full p-2 transition-all duration-1500",
+            {
+              "blur-2xl opacity-0": !isVisible,
+              "blur-none opacity-100": isVisible,
+            },
           )}
         >
           {mainHeading ? (
@@ -32,41 +37,50 @@ export default function ImageStickySection({
             </h3>
           ) : null}
         </div>
-      </div>
 
-      <div className="flex w-screen">
-        <div
-          className={clsx(
-            "w-1/2 sticky top-[calc(12vh+5rem)] h-[calc(88vh-5rem)] transition-all duration-2000",
-          )}
-        >
-          {stickyImage ? (
-            <Image
-              src={urlFor(stickyImage).width(1920).height(1080).url()}
-              alt={stickyImageAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              
-              className="object-cover animate-blur-in rounded-2xl"
-            />
-          ) : null}
-        </div>
-        <div className="w-1/2">
-          <div className="text-primary mx-6 flex flex-col items-center">
-            {list.map((block, index) => {
-              return (
-                <div key={index} className="mb-30 last:mb-10 max-w-3xl">
-                  <ServiceDescription
-                    title={block.heading as string}
-                    body={block.body as string}
-                    estateServices={block.list as string[]}
-                  />
-                </div>
-              );
-            })}
+        <div className="flex w-screen">
+          <div
+            className={clsx(
+              "w-1/2 sticky top-[calc(12vh+5rem)] h-[calc(88vh-5rem)] transition-all duration-1500",
+              {
+                "-translate-x-56 opacity-0": !isVisible,
+                "translate-x-0 opacity-100": isVisible,
+              },
+            )}
+          >
+            {stickyImage ? (
+              <Image
+                src={urlFor(stickyImage).width(1920).height(1080).url()}
+                alt={stickyImageAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover animate-blur-in rounded-2xl"
+              />
+            ) : null}
+          </div>
+          <div className={clsx(
+              "w-1/2 transition-all duration-1500",
+              {
+                "translate-x-56 opacity-0": !isVisible,
+                "translate-x-0 opacity-100": isVisible,
+              },
+            )}>
+            <div className="text-primary mx-6 flex flex-col items-center">
+              {list.map((block, index) => {
+                return (
+                  <div key={index} className="mb-30 last:mb-10 max-w-3xl">
+                    <ServiceDescription
+                      title={block.heading as string}
+                      body={block.body as string}
+                      estateServices={block.list as string[]}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

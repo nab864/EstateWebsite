@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <div className="text-lg font-semibold text-neutral-100">
-              Private Estate Network
+              Regent Property Group
             </div>
             <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
               Estate & Property Management providing discreet oversight and
