@@ -1,9 +1,18 @@
+"use client"
 import { CTAProps } from "@/app/lib/definition";
 import Link from "next/link";
+import { useInView } from "../use-in-view-div";
+import clsx from "clsx";
 
 export function CTASection({ mainSection, ctaText, ctaLink }: CTAProps) {
+    const { ref, isVisible } = useInView<HTMLDivElement>();
+  
   return (
-    <section className="bg-primary text-white py-24">
+    <section ref={ref} className={clsx("bg-primary text-white py-24 transition-all duration-1500",
+          {
+            "translate-y-52 opacity-0": !isVisible,
+            "translate-y-0 opacity-100": isVisible,
+          },)}>
       <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
         <h2 className="text-4xl md:text-5xl font-serif font-bold">
           {mainSection.heading}

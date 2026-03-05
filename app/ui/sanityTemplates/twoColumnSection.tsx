@@ -1,5 +1,7 @@
+"use client";
 import { TwoColumnProps } from "@/app/lib/definition";
 import clsx from "clsx";
+import { useInView } from "../use-in-view-div";
 
 export function TwoColumnSection({
   title,
@@ -10,8 +12,10 @@ export function TwoColumnSection({
   rightColumnTitle,
   rightColumn,
 }: TwoColumnProps) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <section
+      ref={ref}
       className={clsx("py-10", {
         "bg-background-secondary text-secondary": inverseColor,
         "text-primary": !inverseColor,
@@ -19,9 +23,14 @@ export function TwoColumnSection({
     >
       {title ? (
         <h2
-          className={clsx("text-4xl md:text-5xl font-serif text-center mb-10", {
-            "text-secondary": inverseColor,
-          })}
+          className={clsx(
+            "text-4xl md:text-5xl font-serif text-center mb-10 transition-all duration-1500",
+            {
+              "text-secondary": inverseColor,
+              "blur-2xl opacity-0": !isVisible,
+              "blur-none opacity-100": isVisible,
+            },
+          )}
         >
           {title}
         </h2>
@@ -32,11 +41,16 @@ export function TwoColumnSection({
         })}
       >
         <div
-          className={clsx("p-8 rounded-xl shadow-lg", {
-            "bg-none p-none shadow-none": compactColumns,
-            "bg-background/10": inverseColor && !compactColumns,
-            "bg-background-secondary/10": !inverseColor && !compactColumns,
-          })}
+          className={clsx(
+            "p-8 rounded-xl shadow-lg transition-all duration-1500",
+            {
+              "bg-none p-none shadow-none": compactColumns,
+              "bg-background/10": inverseColor && !compactColumns,
+              "bg-background-secondary/10": !inverseColor && !compactColumns,
+              "-translate-x-56 opacity-0": !isVisible,
+              "translate-x-0 opacity-100": isVisible,
+            },
+          )}
         >
           {leftColumnTitle ? (
             <h3 className="text-3xl font-semibold mb-4">{leftColumnTitle}</h3>
@@ -64,11 +78,16 @@ export function TwoColumnSection({
         </div>
 
         <div
-          className={clsx("p-8 rounded-xl shadow-lg", {
-            "bg-none p-none shadow-none": compactColumns,
-            "bg-background/15": inverseColor && !compactColumns,
-            "bg-background-secondary/15": !inverseColor && !compactColumns,
-          })}
+          className={clsx(
+            "p-8 rounded-xl shadow-lg transition-all duration-1500",
+            {
+              "bg-none p-none shadow-none": compactColumns,
+              "bg-background/15": inverseColor && !compactColumns,
+              "bg-background-secondary/15": !inverseColor && !compactColumns,
+              "translate-x-56 opacity-0": !isVisible,
+              "translate-x-0 opacity-100": isVisible,
+            },
+          )}
         >
           {rightColumnTitle ? (
             <h3 className="text-3xl font-semibold mb-4">{rightColumnTitle}</h3>

@@ -1,5 +1,7 @@
+"use client";
 import { MarketOverviewProps } from "@/app/lib/definition";
 import clsx from "clsx";
+import { useInView } from "../use-in-view-div";
 
 export default function MarketOverviewSection({
   heading,
@@ -10,9 +12,16 @@ export default function MarketOverviewSection({
   columnThree,
   footerText,
 }: MarketOverviewProps) {
+  const { ref, isVisible } = useInView<HTMLDivElement>();
+
   return (
-    <section className="mx-auto px-6 py-10">
-      <div className="mb-10">
+    <section ref={ref} className={clsx("mx-auto px-6 py-10 transition-all duration-1500", {
+          "translate-y-52 opacity-0": !isVisible,
+          "translate-y-0 opacity-100": isVisible,
+        })}>
+      <div
+        className="mb-10"
+      >
         {heading ? (
           <h2 className="text-4xl md:text-5xl font-serif text-center text-primary mb-4">
             {heading}
