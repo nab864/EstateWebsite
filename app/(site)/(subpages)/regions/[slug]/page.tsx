@@ -11,7 +11,6 @@ import { CTASection } from "@/app/ui/sanityTemplates/ctaSection";
 import ImageStickySection from "@/app/ui/sanityTemplates/imageStickySection";
 import { CTAImageSection } from "@/app/ui/sanityTemplates/ctaImageSection";
 import { sanityFetch } from "@/sanity/lib/live";
-import { stegaClean } from "next-sanity";
 
 // Optional: Generate metadata
 export async function generateMetadata({
