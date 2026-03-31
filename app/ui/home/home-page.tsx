@@ -16,54 +16,9 @@ import { HeroVideoSection } from "../sanityTemplates/heroVideoSection";
 import { MarketsWeServe } from "../sanityTemplates/marketsWeServe";
 
 export default function HomePage({ home }: { home: any }) {
-  const [show, setShow] = useState(false);
-  const [isFirstVisit, setIsFirstVisit] = useState(false);
-
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    //localStorage.setItem("hasVisited", "false");
-    scrollRef.current?.scrollTo(0, 0);
-    const hasVisited = localStorage.getItem("hasVisited");
-    if (hasVisited === "false") {
-      setShow(true);
-      setIsFirstVisit(true);
-
-      const timer = setTimeout(() => {
-        setShow(false);
-      }, 5000);
-      const timer2 = setTimeout(() => {
-        localStorage.setItem("hasVisited", "true");
-      }, 10000);
-      return () => {
-        clearTimeout(timer);
-        clearTimeout(timer2);
-      };
-    }
-  }, []);
 
   return (
     <div>
-      {show ? (
-        <div
-          className="fixed inset-0 flex flex-col items-center justify-center bg-background animate-slide-up-out z-50"
-          style={{ animationDelay: `${3.5}s` }}
-        >
-          <div className="relative flex flex-col items-center justify-center">
-            <div className="opacity-0 animate-blur-in h-[50vh] mb-10">
-              <CompanyLogo />
-            </div>
-            <h1
-              className="font-serif text-5xl animate-blur-in opacity-0"
-              style={{ animationDelay: `${1}s` }}
-            >
-              <span className="text-primary">
-                PRIVATE ESTATE
-                <span className="text-[#396a83]">{" NETWORK"}</span>
-              </span>
-            </h1>
-          </div>
-        </div>
-      ) : null}
 
       {home.data.sections?.map((section: any) => {
         switch (section._type) {
@@ -73,7 +28,6 @@ export default function HomePage({ home }: { home: any }) {
             return (
               <HeroVideoSection
                 key={section._key}
-                isFirstVisit={isFirstVisit}
                 {...section}
               />
             );

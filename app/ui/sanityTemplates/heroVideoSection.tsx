@@ -16,7 +16,6 @@ export function HeroVideoSection({
   ctaLink,
   ctaText2,
   ctaLink2,
-  isFirstVisit,
 }: HeroVideoSectionProps) {
   const [opacity, setOpacity] = useState(1);
 
@@ -57,13 +56,9 @@ export function HeroVideoSection({
 
       <div
         className={clsx(
-          "absolute inset-0 flex items-center justify-center sm:items-end sm:justify-start sm:mb-20 sm:ml-20 animate-slide-right opacity-0",
-          {
-            "animate-slide-right opacity-0": isFirstVisit,
-            "opacity-100": !isFirstVisit,
-          },
+          "absolute inset-0 flex items-center justify-center sm:items-end sm:justify-start sm:mb-20 sm:ml-20 animate-slide-right"
+          
         )}
-        style={{ animationDelay: isFirstVisit ? "5s" : "0s" }}
       >
         <div className="flex flex-col justify-center items-center max-w-5xl">
           {company ? (
